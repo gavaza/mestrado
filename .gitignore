@@ -6,4 +6,5 @@
 *.lof
 *.lot
 *.toc
+template-*.pdf
 .DS_Store
