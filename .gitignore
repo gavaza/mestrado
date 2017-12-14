@@ -6,5 +6,6 @@
 *.lof
 *.lot
 *.toc
+*.swp
 LGavaza.pdf
 .DS_Store
