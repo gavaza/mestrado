@@ -18,13 +18,14 @@ all: LGavaza.pdf
 	latex $<
 
 %.pdf: %.tex ufbathesis.cls %.aux %.bbl %.blg
-	pdflatex $<
+	latex $<
 	pdflatex $<
 
 %.bbl %.blg: %.aux biblio.bib
 	bibtex $<
 
 %.aux: %.tex
+	$(RM) %.aux
 	latex $<
 
 clean:
