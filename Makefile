@@ -25,7 +25,6 @@ all: LGavaza.pdf
 	bibtex $<
 
 %.aux: %.tex
-	$(RM) %.aux
 	latex $<
 
 clean:
