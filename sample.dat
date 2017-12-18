@@ -1,7 +1,6 @@
 # This file is called	sample.dat
-q/a	A	B	C	D	E	Total
-T5	1	2	3	4	5	15
-T1	10	20	30	35	5	100
-T2	20	20	20	20	20	100
-T4	10	10	10	10	10	50
-T3	5	6	2	2	10	25
+q/a	"Corcorda" "Concorda em partes"	"Indiferente" "Discorda em partes"	"Discorda"	"Total"
+A	9	3	1	0	1	14
+B	5	6	1	1	1	14
+C	9	3	2	0	0	14
+D	7	4	1	2	0	14	

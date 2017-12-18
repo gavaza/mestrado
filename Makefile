@@ -27,5 +27,8 @@ all: LGavaza.pdf
 %.aux: %.tex
 	latex $<
 
+%.png: %.dat
+	gnuplot -e "fileout='$@'; filein='$<'" histograms.5.gnu
+
 clean:
-	$(RM) *.bbl *.blg *.aux *.lof *.log *.lot *.toc *.out LGavaza.pdf LGavaza.dvi
+	$(RM) *.png *.bbl *.blg *.aux *.lof *.log *.lot *.toc *.out LGavaza.pdf LGavaza.dvi

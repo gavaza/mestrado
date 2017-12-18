@@ -8,5 +8,6 @@
 *.lot
 *.toc
 *.swp
+*.png
 LGavaza.pdf
 .DS_Store
