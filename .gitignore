@@ -4,6 +4,7 @@
 *.dvi
 *.log
 *.lof
+*.tmp
 *.lot
 *.toc
 *.swp
