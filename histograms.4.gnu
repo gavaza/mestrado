@@ -28,10 +28,10 @@ set ytics  norangelimit
 set y2label "(%)"
 set y2tics border in scale 0.5,0 nomirror rotate by 0 autojustify
 set y2tics 0,10,100
-set y2range [ 0.00000 : 100.000 ] noreverse nowriteback
+set y2range [ 100.00000 : 0.000 ] reverse nowriteback
 set arrow from graph 0,0.95 to graph 0,1 size screen 0.09,10,30 \
     filled ls 0
-set arrow from graph 1,0.95 to graph 1,1 size screen 0.09,10,30 \
+set arrow from graph 1,0.05 to graph 1,0 size screen 0.09,10,30 \
     filled ls 0
 set colorbox vertical origin screen 0.9, 0.2, 0 size screen 0.05, 0.6, 0 front  noinvert bdefault
 x = 0.0
