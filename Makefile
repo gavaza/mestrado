@@ -27,8 +27,8 @@ all: LGavaza.pdf
 %.aux: %.tex
 	latex $<
 
-png: contar.c histograms.4.gnu histograms.5.gnu
-	sh ./make_png.sh
+eps: contar.c histograms.4.gnu histograms.5.gnu
+	sh ./make_eps.sh
 
 clean:
-	$(RM)  notas-*.png question-*.png *.bbl *.blg *.aux *.lof *.log *.lot *.toc *.out LGavaza.pdf LGavaza.dvi
+	$(RM)  notas-*.eps question-*.eps *.bbl *.blg *.aux *.lof *.log *.lot *.toc *.out LGavaza.pdf LGavaza.dvi *eps-converted-to.pdf

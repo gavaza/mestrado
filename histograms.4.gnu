@@ -1,4 +1,5 @@
-set terminal pngcairo  transparent enhanced font "sans,15" fontscale 1.0 size 600, 400
+set terminal postscript eps enhanced color font "Courier,80" fontscale 1.0 size 30, 15
+set encoding utf8
 if (!exists("fileout")) fileout='histograms.5.png'
 set output fileout
 set bar 1.000000 front
@@ -20,6 +21,7 @@ set datafile missing '-'
 #set style data histograms
 set xtics border in scale 0,0 nomirror rotate by 0 autojustify
 set xtics   0,1,10
+set xrange [ 0.00000 : 10.000 ] reverse nowriteback
 unset ytics
 set ylabel ""
 set ytics border in scale 0.5,0 nomirror rotate by 0 autojustify
@@ -35,8 +37,8 @@ set arrow from graph 1,0.05 to graph 1,0 size screen 0.09,10,30 \
     filled ls 0
 set colorbox vertical origin screen 0.9, 0.2, 0 size screen 0.05, 0.6, 0 front  noinvert bdefault
 x = 0.0
-set linetype 2 lc rgb "red"        lw 2 pt 5 
-set linetype 1 lc rgb "blue"	        lw 2 pt 5 
+set linetype 2 lc rgb "red"        lw 2 pt 2 
+set linetype 1 lc rgb "blue"	        lw 2 pt 2
 set linetype cycle 2
 
 if (!exists("filein")) filein='notas.dat'
