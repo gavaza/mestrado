@@ -8,6 +8,7 @@
 *.lot
 *.toc
 *.swp
-*.png
+notas-*.png
+question-*.png
 LGavaza.pdf
 .DS_Store

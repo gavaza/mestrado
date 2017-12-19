@@ -4,8 +4,9 @@ gcc -o contar.out contar.c
 for i in $( ls notas-*.dat ); do
 	./contar.out < $i > g$i
 	gnuplot -e "fileout='$(basename "$i" .dat).png'; filein='g$i'" histograms.4.gnu
-	touch g$i
-	rm -rf g$i
+done
+for i in $( ls gnotas-*.dat ); do
+	rm -rf $i
 done
 rm -rf contar.out
 
