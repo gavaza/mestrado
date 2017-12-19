@@ -27,5 +27,8 @@ all: LGavaza.pdf
 %.aux: %.tex
 	latex $<
 
+png: contar.c histograms.4.gnu histograms.5.gnu
+	sh ./make_png.sh
+
 clean:
 	$(RM) gnotas-*.dat *.png *.bbl *.blg *.aux *.lof *.log *.lot *.toc *.out LGavaza.pdf LGavaza.dvi
