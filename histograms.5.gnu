@@ -26,7 +26,7 @@ set xtics   ()
 unset ytics
 set ytics border in scale 0.5,0 nomirror rotate by 0 autojustify
 set ytics 0,10,100
-set ylabel "Satisação (%)" 
+set ylabel "Satisfação (%)" 
 set yrange [ 0.00000 : 105.000 ] noreverse nowriteback
 set arrow from graph 0,0.95 to graph 0,1 size screen 0.09,10,30 \
     filled ls 0
