@@ -21,7 +21,7 @@ set datafile missing '-'
 #set style data histograms
 set xtics border in scale 0,0 nomirror rotate by 0 autojustify
 set xtics   0,1,10
-set xrange [ 0.00000 : 10.000 ] reverse nowriteback
+set xrange [ 0.00000 : 11.000 ] reverse nowriteback
 unset ytics
 set ylabel ""
 set ytics border in scale 0.5,0 nomirror rotate by 0 autojustify
