@@ -10,6 +10,8 @@
 *.swp
 notas-*.eps
 question-*.eps
+concluintes-*.eps
+desistentes-*.eps
 *eps-converted-to.pdf
 LGavaza.pdf
 .DS_Store
