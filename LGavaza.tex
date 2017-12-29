@@ -43,6 +43,8 @@
 \usepackage[printonlyused, withpage]{acronym}
 
 \newcommand{\suprimir}[1]{}
+% incluir Likert
+\input{afirmativas-likert.tex}
 
 % Universidade
 \university{Universidade Federal da Bahia}
@@ -228,14 +230,16 @@ PALAVRAS-CHAVE EM INGL\^{E}S.
 
 % Apendices
 % Comente se naoo houver apendices
-% \appendix
+ \appendix
 
-%\xchapter{Exemplo de Ap\^endice}{} %sem preambulo
+%\xchapter{Exemplo de Ap^endice}{} %sem preambulo
 %\lipsum
 % Eh aconselhavel criar cada apendice em um arquivo separado, digamos
 % "apendice1.tex", "apendice.tex", ... "apendiceM.tex" e depois
 % inclui--los com:
-% \include{apendice1}
+\include{apendice-quetionario-problema}
+\include{apendice-quetionario-disciplina}
+\include{apendice-quetionario-disciplina-desistente}
 % \include{apendice2}
 % ...
 % \include{apendiceM}
