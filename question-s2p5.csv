@@ -1,4 +1,4 @@
-q/a,Corcordo,Concordo em partes,Indiferente,Discordo em partes,Discordo,Total
+q/a,Concordo,Concordo em partes,Indiferente,Discordo em partes,Discordo,Total
 A,2,5,0,0,0,7
 B,3,3,0,1,0,7
 C,2,3,1,0,1,7
@@ -20,6 +20,6 @@ R,4,2,1,0,0,7
 S,3,2,1,1,0,7
 T,4,2,1,0,0,7
 U,2,4,0,1,0,7
-W,0,5,2,0,0,7
-V,2,1,1,2,1,7
+V,0,5,2,0,0,7
+W,2,1,1,2,1,7
 X,3,1,1,2,0,7
