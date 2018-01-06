@@ -32,8 +32,8 @@ set arrow from graph 0,0.95 to graph 0,1 size screen 0.09,10,30 \
     filled ls 0
 set colorbox vertical origin screen 0.9, 0.2, 0 size screen 0.05, 0.6, 0 front  noinvert bdefault
 set linetype 1 lc rgb "dark-green"   lw 2 pt 5
-set linetype 2 lc rgb "sea-green"        lw 2 pt 5 
-set linetype 3 lc rgb "yellow" lw 2 pt 5
+set linetype 2 lc rgb "#32CD32"        lw 2 pt 5 
+set linetype 3 lc rgb "lemonchiffon" lw 2 pt 5
 set linetype 4 lc rgb "orange"    lw 2 pt 5
 set linetype 5 lc rgb "red"        lw 2 pt 5
 set linetype cycle 5
