@@ -1,0 +1,102 @@
+\subsection{Problema}
+Um certo colecionador de arte dispõe de partituras e gravações de
+músicas, as quais ele precisa catalogar e processar mediante computador.
+O colecionador em questão é muito exigente com o tratamento do seu material e
+garante que para cada música na sua coleção, a partitura corresponde exatamente com
+a gravação correspondente.
+
+Algumas das partituras que o colecionador possui são para apenas um
+instrumento.
+Outras são para vários instrumentos.
+Cada partitura para um instrumento pode ser vista como uma sequência de
+símbolos musicais.
+No caso das partituras para vários instrumentos, elas podem ser vistas
+como sequências, mas de símbolos compostos: cada elemento da sequência é formado por um número finito
+de símbolos musicais.
+Cada música pode ter um número arbitrário de símbolos.
+
+Veja a seguir exemplos de partituras.
+
+Um instrumento:\\
+\begin{abc}[name=um]
+X:1
+M:2/4
+K:G
+[L:1/4] G/A/ | B d | d B | c c |
+\end{abc}
+
+Note que cada nota pode ser vista de forma independente como um símbolo (escrito em um pentagrama). No exemplo a seguir, correspondente a uma partitura para três instrumentos, cada um deles possui uma representação similar à vista acima: Cada instrumento possui o seu próprio pentagrama e em cada um deles, os símbolos são superpostos em cada tempo.
+
+Três instrumentos:\\
+\begin{abc}[name=tres]
+X: 1
+M: 3/4
+L: 1/4
+V:1 name="Flauta" clef=treble
+V:2 name="Baixo" clef=treble
+V:3 name="Piano" clef=treble
+K:Gm
+%
+[V:1] |: b d' b/g/ | ^f d a
+[V:2] |: G B G | d ^f d 
+[V:3] |: G/A/ b  B | d A c
+\end{abc}
+
+No caso das partituras para vários instrumentos, elas
+também podem ser vistas como sequências, mas de símbolos
+compostos: cada elemento da sequência é formado
+por um número finito de símbolos musicais, sendo um
+em cada instrumento.
+
+Apesar de bastante exigente, este colecionador não entende muito bem sobre linguagens,
+mas ele gostaria de ter um sistema automatizado que pudesse criar novas composições
+a partir das que já possui.
+
+O colecionador ficou sabendo que os alunos desta turma de Introdução as Linguagens Formais
+e Teoria da Computação da UFBA estão estudando sobre linguagens formais, então decidiu pedir
+ajuda para que eles idealizassem o sistema.
+
+Ele disponibilizou toda a coleção e listou algumas restrições que o sistema
+deve atender para que ele fique satisfeito.
+
+\begin{enumerate}
+\item O colecionador quer que ao menos duas músicas sejam utilizadas como base para gerar uma nova música,
+onde apenas símbolos existentes nas músicas utilizadas como base podem ser utilizadas para uma nova composição;
+\item O colecionador gostaria que o sistema fosse capaz de criar músicas para uma quantidade variada de instrumentos;
+\item Em ao menos $10\%$ e no máximo $20\%$ das superposições dos símbolos, isto é, quando a nova composição for para mais de um instrumento,
+o colecionador gostaria de ouvir a mesma nota em todos os instrumentos da nova composição;
+\item O colecionador quer que pequenos trechos das músicas utilizadas como base estejam
+presentes nas novas composições;
+\item O colecionador quer ter certeza que as novas composições contemplam o máximo
+de operações existentes em linguagens formais estudadas pelos alunos, então pediu para
+que eles assim fizessem, além de incluir detalhadamente ao menos um exemplo de cada operação
+no relatório.
+\end{enumerate}
+
+\subsection{Produto}
+Uma nova coleção de músicas com no mínimo 10 composições geradas conforme as exigências do colecionador
+para demonstrar que é capaz de desenvolver o sistema idealizado, bem como, um relatório no modelo de
+artigos da SBC que descreva com o máximo de detalhes a idealização de funcionamento do sistema, onde deverá
+constar quais as operações executadas pelo sistema para criação das músicas e incluir ao menos
+um exemplo de cada uma das operações sob lingaguens formais utilizadas pelo sistema idealizado.
+
+\subsection{Cronograma}
+
+4 sessões tutoriais e 1 aula expositiva.
+
+\subsection{\large{Recursos para aprendizagem}}
+
+RAMOS, M. V. M.; JOSÉ NETO, J.; VEGA, I. S. \textbf{Linguagens Formais: Teoria, Modelagem e Implementação}. Editora Bookman, 2009.\\
+
+\noindent
+MENEZES, Paulo Blauth. \textbf{Linguagens formais e autômatos}. 6. ed. Bookman, 2011.\\
+
+\noindent
+https://hudlac.wordpress.com/notacao-musical-abc\\
+
+\noindent
+http://abcnotation.com
+
+\subsection*{Referências}
+
+Este problema é baseado nas notas de aula do professor Martin Musicante\footnote{\scriptsize{https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1221251}} do DIMAP - UFRN.

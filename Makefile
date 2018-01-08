@@ -18,14 +18,14 @@ all: LGavaza.pdf
 	latex $<
 
 %.pdf: %.tex ufbathesis.cls %.aux %.bbl %.blg
-	latex $<
-	pdflatex $<
+	pdflatex --shell-escape $<
+	pdflatex --shell-escape $<
 
 %.bbl %.blg: %.aux biblio.bib
 	bibtex $<
 
 %.aux: %.tex
-	latex $<
+	pdflatex --shell-escape $<
 
 eps: contar.c histograms.4.gnu histograms.5.gnu
 	sh ./make_eps.sh
@@ -33,5 +33,6 @@ eps: contar.c histograms.4.gnu histograms.5.gnu
 clean:
 	$(RM)  notas-*.eps question-*.eps desistentes-*.eps concluintes-*.eps \
 	       *.bbl *.blg *.aux *.lof *.log *.lot *.toc *.out LGavaza.pdf LGavaza.dvi \
-	       *eps-converted-to.pdf ufba.pdf
+	       *eps-converted-to.pdf ufba.pdf {um,tres}.{ps,abc,eps,pdf} \
+		apendice/problemas/*.aux
 		

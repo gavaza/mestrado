@@ -1,0 +1,178 @@
+\subsection{Problema}
+Já ouviram falar que existe um prêmio de 1 milhão de dólares a cerca dessa questão (NP=P?)?
+Um algoritmo $A$ é dito ``polinomial'' se existe algum
+polinômio $p$ tal que $A$ sempre termina (com a resposta correta)
+depois de no máximo $p(n)$ operações elementares, para quaisquer dados
+com tamanho total n.
+O tamanho pode ser medido em bits ou bytes, tanto faz.
+Por exemplo, existe um algoritmo que ordena qualquer lista de números
+inteiros, com $n$ bits de tamanho, em menos de $c \times n^{2} + d$ operações, para
+certas constantes $c$ e $d$.
+Esse algoritmo portanto é polinomial.
+
+Por outro lado, o algoritmo que conta de 1 em 1 desde 0 até um número
+$x$ dado não é polinomial; pois, se o limite dado $x$ é um número de $n$
+bits, o algoritmo executa pelo menos $2^n$ operações --- e não existe
+nenhum polinômio $p(n)$ que seja maior que $2^n$ para todo $n$.
+
+No problema ``P = NP?'', a letra ``P'' representa o conjunto de todas as
+funções (``problemas'') que podem ser calculadas por algoritmos
+polinomiais.
+Por exemplo, a função $f(x,y) = x \times y$ está em P, porque o
+algoritmo padrão (da escola primária) para calcular o produto de dois
+números é polinomial.
+Outro exemplo de função que está em P é a função $h(x)$ = \{1 se $x$ é
+primo; $0$ se $x$ é composto\}.
+
+Ninguém conhecia um algoritmo polinomial para calcular essa função, até que,
+uns 15 anos atrás, encontrou-se um que efetua menos
+de $c \times n^{14} + d$ operações, para certas
+constantes $c$ e $d$\footnote{Pesquise sobre o teste de primalidade AKS}.
+Lembre que $n$ é o \textbf{número de bits} do argumento $x$, e não o valor
+máximo de $x$!
+
+Por outro lado, NP representa o conjunto de todas as funções que podem
+ser \textbf{conferidas} por algoritmos polinomiais.
+Por exemplo, a função $g(x)$ = \textit{(fatores primos de x)} está em NP,
+porque existe um algoritmo polinomial que, dado $x$ e uma lista de números,
+verifica se esses números são todos primos (vide acima), e se o produto deles
+é igual a $x$.
+Mas ninguém sabe ainda se existe um algoritmo polinomial para
+\textbf{encontrar} esses fatores primos, dado apenas $x$.
+
+A pergunta ``P = NP?'' pode portanto ser traduzida assim:
+  \textit{``será que para toda função que pode ser \textbf{conferida} por um
+  algoritmo polinomial também pode ser \textbf{calculada} por um
+  algoritmo polinomial?''}
+
+Se a resposta for ``sim'' (isto é, se P=NP), então existem algoritmos
+polinomiais para encontrar os fatores primos de um número, para
+escolher um conjunto de caixas num armazém cujo peso total é
+exatamente uma tonelada, e para muitos outros problemas interessantes
+--- que obviamente estão em NP, mas ninguém sabe se estão em P.
+
+O que se sabe é que existe um certo conjunto de ``funções chave'' no
+conjunto NP (chamadas de funções ``NP-completas''), tais que se
+qualquer uma dessas funções pode ser calculada por um algoritmo polinomial, então
+todas as funções de NP também podem ser, e portanto P = NP.
+
+O exemplo do armazém acima, em particular, é uma função NP-completa: se alguém
+conseguir encontrar um algoritmo polinomial para resolver esse
+problema, ganha o tal milhão de dólares.
+
+Essa questão tem sido intensamente investigada pelos teóricos da
+computação há uns 40 anos, mas ninguém conseguiu encontrar nem mesmo
+uma migalha de pista de uma dica para uma intuição de como começar a
+atacar esse problema.
+
+Muitos apostam que NP é maior que P, alguns
+apostam que são iguais, mas no fundo todos estão apenas declarando
+seu desejo, ou apostando no escuro.
+
+
+%  > Alguém poderia me dar exemplos de implicações práticas dessa
+%  > teoria sobre a nossa área de computação? Ou seja, essa teoria
+%  > realmente nos afeta do ponto de vista prático?
+
+Mas então, quais seriam as implicações práticas dessa teoria sobre
+a nossa área de computação?
+Ou seja, essa teoria realmente nos afeta do ponto de vista prático?
+
+Houve uma época em que se acreditava que ``existe algoritmo
+polinomial'' era sinônimo de ``existe algoritmo rápido o bastante
+para ser usado na prática''.
+Por essa razão, muitos teóricos da computação ainda
+consideram que encontrar um algoritmo polinomial para uma 
+função $f$ é um grande feito; e desistem de procurar um algoritmo
+eficiente quando descobrem que $f$ é NP-completa.
+
+Porém, hoje as pessoas estão aos poucos se dando conta de que essa
+crença não tem base. Um algoritmo que fatora qualquer número de
+$n$ bits em $n^{10^{10^{10}}}$ operações é polinomial pela definição, mas é
+absolutamente inútil na prática, mesmo extrapolando o aumento da
+velocidade dos computadores por vários séculos.
+Por outro lado, um algoritmo que fizesse isso com $n + 1,0000000000000000000000000001^{n}$ ou
+$n^{(1+log(log(log(log(log(log(n)))))))}$ operações seria maravilhosamente
+rápido e útil, apesar de não ser polinomial.
+Estes exemplos mostram porque a questão ``P = NP?'' é tão
+difícil.
+
+Os algoritmos polinomiais incluem tanto os que fazem
+$n^{1,000000000000000000001}$ passos quanto os que fazem $n^{14}$ 
+ou $n^{10^{10^{10}}}$, e os não-polinomiais incluem tanto os que fazem 
+$n^{(1+log(log(log(log(log(log(n)))))))}$ passos quanto os que fazem $2^{n}$
+ou $10^{10^{10^{n}}}$. 
+Portanto, a diferença entre os dois conjuntos (polinomiais e não
+polinomiais) não é ``muito eficiente'' contra ``absurdamente lento'' (como
+se costumava dizer), mas uma sutileza matemática que só se manifesta
+quando $n$ tende (realmente) para infinito.
+Aliás, se o tamanho dos dados tiver qualquer limite fixo, por exemplo
+$2^{64}$ bits ou $10^{10^{10}}$ bits, então toda função pode ser calculada por um algoritmo
+polinomial --- e o problema "P = NP?" não faz mais sentido.
+%Portanto, respondendo à sua pergunta: até onde sabemos, "P=NP?" é um
+%problema de matemática "pura", como o Último Teorema de Fermat ou a
+%Conjetura de Poincaré --- e tão relevante para o projeto de algoritmos
+%eficientes quanto esses dois. Ou até menos.
+
+A razão pela qual os teóricos da computação continuam investigando a
+questão ``P = NP?'' (além dos dólares) é que ela é basicamente a
+única questão sobre velocidade de algoritmos em que é possível provar
+alguma coisa. Isso porque a classe dos algoritmos polinomiais é
+fechada por composição. Isto é, se $A$ é um algoritmo polinomial, e
+trocarmos uma operação qualquer de $A$ por uma chamada de outro
+algoritmo polinomial $B$, então o resultado continua sendo um algoritmo
+polinomial (mas talvez com grau maior).
+Esta propriedade facilita muito o estudo teórico das classes P e NP.
+
+Infelizmente, classes que seriam mais interessantes na prática ---
+como por exemplo ``algoritmos que executam no máximo $1000 \times n^{2}$
+operações'', ou ``no máximo $10^{8}$ operações para entradas de tamanho
+$1000$'' --- não são fechadas por composição. E, por essa causa, não
+existe teoria nenhuma sobre essas classes de algoritmos.
+Ou seja, na teoria da computação, ainda estamos como o tal bêbado
+procurando as chaves --- não onde perdeu, mas onde tem mais luz...
+
+\subsection{Produto}
+Você deverá discutir e responder, em sessões tutorias,
+sobre as questões abaixo enumeradas.
+
+%\emph{\textbf{Neste espaço serão apresentadas, em sala de aula, na sessão tutorial, as questões mencionadas.}}
+
+\begin{enumerate}
+\item{``Dado um número natural $n$, encontrar um número natural $p$, maior que 1
+e menor que $n$, que seja divisor $n$ ou constatar que tal $p$ não existe.''
+Qual a classe deste ``problema''? P, NP ou NP-Completo? Como provar a
+classe deste problema?}
+
+\item{Poderíamos afirmar que um problema é NP, se executando em um supercomputador,
+o melhor algoritmo conhecido, para uma entrada $n$ de 128 bits, forem necessárias
+cerca de 48 horas para encontrar
+uma solução correta?}
+
+\item{Qual o conceito matemático que permite agrupar problemas distintos dentro de uma mesma classe?}
+
+\item{Em termos de Máquina de Turing, como poderíamos enunciar um problema NP?}
+
+\item{É possível afirmar que ``resolver problemas NP requerem necessariamente tempo exponencial''?}
+
+\end{enumerate}
+
+\subsection{Recursos para aprendizagem}
+
+\noindent
+%HOPCROFT, John E.; ULLMAN, Jeffrey D.; MOTWANI, Rajeev. \textbf{Introdução à teoria de autômatos, linguagens e computação}. Editora Campus, 2002.\\
+
+\noindent
+GAREY, Michael R.; JOHNSON, David S. \textbf{Computers and intractability}. New York: wh freeman, 2002.\\
+
+\noindent
+SIPSER, Michael. \textbf{Introdução à teoria da computação}. Thomson Learning, 2007.\\
+
+%\noindent
+%GREENLAW, Raymond; Hoover, H. James. \textbf{Fundamentals of the Theory of Computation - Principles and Practice}. Morgan Kaufmann Publishers, 1998.\\
+
+\subsection*{Referências}
+
+Este problema é baseado em uma explicação do
+professor Jorge Stolfi\footnote{\scriptsize{http://www.ic.unicamp.br/~stolfi}} do IC - UNICAMP
+para o problema ``P = NP?'' em 18 de Abril de 2005.

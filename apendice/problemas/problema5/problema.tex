@@ -1,0 +1,64 @@
+\subsection{Problema}
+Todos os compiladores da linguagem C tomam como entrada um código fonte de um
+programa e produzem como saída um código executável.
+Os compiladores podem ser bastante sofisticados. Por exemplo, eles
+podem detectar erros de sintaxe, podem também indicar alguns erros de
+semântica (como o uso de ``='' em uma situação que normalmente pede-se ``==''),
+eles podem otimizar o código resultante em termos de tempo e/ou memória consumidos.
+
+O quanto inteligente um compilador pode ser?
+Por exemplo, ele poderia detectar que todos os valores de entrada negativos
+levam o seguinte programa a entrar em um \textit{loop} infinito?
+
+\lstinputlisting{apendice/problemas/problema5/codigo1.c}
+
+Talvez compiladores não sejam assim tão sofisticados, mas será
+que seriam capazes de responder uma questão geral, como:
+\\ \textbf{``Um programa P pára quando
+lhe é fornecida uma determinada entrada I?''}
+
+Suponha que o compilador possa responder tal questão, então poderíamos extrair
+do programa a parte que responde a esta pergunta e
+encapsular o segmento de código numa função chamada \textit{Halts}.
+
+
+%Talvez compiladores não sejam assim tão sofisticados, mas será que poderiam responder
+%a uma questão geral, como ``Um programa P pára quando lhe é fornecida uma determinada entrada I?'' ?
+%Suponha que o compilador é capaz disto, então poderíamos extrair do programa a parte que responde a esta pergunta e
+%encapsular o segmento de código numa função chamada Halts.
+Uma vez que tanto o programa e a sua
+entrada são simplesmente uma sequência de caracteres, \textit{Halts} pode ser
+especificado como se segue:
+
+\lstinputlisting{apendice/problemas/problema5/halts.c}
+
+Agora vamos escrever algo meio estranho, um novo programa com o seguinte código:
+
+\lstinputlisting{apendice/problemas/problema5/diagonal.c}
+
+\subsection{Produto}
+Um relatório no modelo de artigos da SBC que descreva com o máximo
+de detalhes o funcionamento do programa \textit{diagonal} recebendo como entrada
+o código fonte do próprio programa \textit{diagonal}.
+No relatório você deverá (i) caracterizar este problema como de decisão;
+(ii) justificar se este é um problema decidível ou indecidível; e (iii)
+idealizar o funcionamento deste problema com a formalização Máquina de Turing.
+
+\subsection{Cronograma}
+
+2 sessões tutoriais e 1 aula expositiva.
+
+\subsection{\large{Recursos para aprendizagem}}
+
+\noindent
+HOPCROFT, John E.; ULLMAN, Jeffrey D.; MOTWANI, Rajeev. \textbf{Introdução à teoria de autômatos, linguagens e computação}. Editora Campus, 2002.\\
+
+\noindent
+SIPSER, Michael. \textbf{Introdução à teoria da computação}. Thomson Learning, 2007.\\
+
+\noindent
+GREENLAW, Raymond; Hoover, H. James. \textbf{Fundamentals of the Theory of Computation - Principles and Practice}. Morgan Kaufmann Publishers, 1998.\\
+
+%\section*{Referências}
+
+%Este problema é baseado nas notas de aula do professor Martin Musicante\footnote{\scriptsize{https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1221251}} do DIMAP - UFRN.
