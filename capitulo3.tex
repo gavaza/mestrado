@@ -1,3 +1,75 @@
+\newcommand{\descricaoSemestre}[6]{
+Neste semestre foi utilizado uma abordagem híbrida com abordagem tradicional de ensino
+e aprendizagem, e metodologia PBL.
+
+A carga horária de #1 horas da disciplina no semestre foi dividida em:
+#2 horas para a realização de sessões tutoriais de PBL em que foi conduzida a abordagem;
+#3 horas para a realização de aulas expositivas em que o educador apresentou
+conceitos da disciplina;
+e #4 horas para a realização de avaliações tradicionais.
+
+A experiência aconteceu em uma sala de aula tradicional equipada com um
+quadro branco{\ifthenelse{\equal{#5}{1}}{.}{ e com quadros adicionais
+feitos com papel metro colados nas paredes da sala.}}
+Nas sessões tutorias os estudantes foram
+distribuídos{\ifthenelse{\equal{#5}{1}}{ em semicírculo de
+forma que todos foram capazes de enxergar o quadro e
+tiveram interação entre eles facilitada.}{ em grupos de
+cinco até dez participantes.
+Os grupos formaram semicírculos de forma que todos foram
+capazes de enxergar o quadro adicional referente ao grupo
+ao qual foi designado e tiveram interação dentro do grupo
+facilitada.}}
+
+% perfil dos participantes
+Para este semestre foram #6 estudantes inscritos na disciplina.}
+
+\newcommand{\descricaoSemestreProblemas}[4]{% problemas utilizados
+
+Foram escolhidos #1 problemas, para este semestre, para trabalhar o
+conteúdo da disciplina em conjunto com a abordagem tradicional.
+No que se refere a abordagem tradicional, os conteúdos foram trabalhados
+com os estudantes em aulas expositivas utilizando quadro e apresentações
+pelo professor.
+Ao longo deste semestre, os estudantes {\ifthenelse{\equal{#2}{1}}
+{construíram uma apresentação, um seminário, }
+{construíram um projeto de desenvolvimento, }
+com conteúdos relacionados aos
+compiladores, como por exemplo, analisadores léxico, sintático e semântico,
+otimizações de código, árvores de derivação}.
+
+Para avaliação de conceito dos estudantes foram atribuídas notas para
+o {\ifthenelse{\equal{#2}{1}}{seminário}{projeto de desenvolvimento}},
+para os problemas e duas avaliações escritas individuais e sem consultas.
+No caso dos problemas, a nota considerou assiduidade e participação dos
+estudantes nas discussões das sessões tutoriais e o produto produzido
+como solução para o problema.
+
+O problema ``#3'' foi utilizado como demonstração
+aos estudantes do funcionamento da metodologia PBL e por não abordar
+especificamente nenhum conteúdo da disciplina não foi considerado para
+efeitos de avaliação dos estudantes, nem foi considerado para
+efeitos de análise deste estudo.
+
+Para este semestre os problemas aplicados para
+avaliação dos estudantes foram:
+\begin{enumerate}
+\item{{\ifthenelse{\equal{#4}{1}}{Coleção de músicas}{O Código Morse}}}
+\item{A máquina de vender refrigerantes}
+\item{O controle de tráfego (com Autômatos Finitos com Pilha)}
+\item{O controle de tráfego (com Máquina de Turing)}
+\item{Uma função bastante curiosa}
+\item{P \textit{versus} NP (P = NP?)}
+\end{enumerate}
+
+Um detalhe a considerar é que embora as discussões referente ao sexto problema
+tenha seguido a metodologia PBL, ao estudante foi solicitado responder
+uma lista de exercícios referente as questões apresentadas ao longo
+do texto ao invés da produção de um produto solução para o problema.
+Esse problema não é considerado para efeitos análises e resultados
+deste estudo.
+}
+
 \xchapter{Experiência em sala de aula}{} %sem preambulo
 \label{cap-experiencia}
 % É recomendável utilizar `\acresetall' no início de cada capítulo para reiníciar o contator de referências às siglas.
@@ -152,79 +224,11 @@ O objetivo deste problema é mostrar aos estudantes
 a condução na metologia.
 
 \section{Semestre 2016.1}
-
-Neste semestre foi utilizado uma abordagem híbrida com abordagem tradicional de ensino
-e aprendizagem, e metodologia PBL.
-
-A carga horária de 68 horas da disciplina no semestre foi dividida em:
-26 horas para a realização de sessões tutoriais de PBL em que foi conduzida a abordagem;
-32 horas para a realização de aulas expositivas em que o educador apresentou conceitos da disciplina;
-e 10 horas para a realização de avaliações tradicionais.
-
-A experiência aconteceu em uma sala de aula tradicional equipada com um
-quadro branco.
-Nas sessões tutorias os estudantes foram distribuídos em semicírculo de forma que todos foram capazes de
-enxergar o quadro e tiveram interação entre eles facilitada.
-
-% perfil dos participantes
-Para este semestre foram 26 estudantes inscritos na disciplina.
-
-% problemas utilizados
-Para este semestre foram escolhidos seis problemas para trabalhar o conteúdo da disciplina
-em conjunto com a abordagem tradicional.
-No que se refere a abordagem tradicional, os conteúdos foram trabalhados com os estudantes
-em aulas expositivas utilizando quadro e apresentações pelo professor.
-Ao longo deste semestre, os estudantes construíram uma apresentação, um seminário,
-de conteúdos relacionados aos compiladores, como por exemplo, analisadores léxico,
-sintático e semântico, otimizações de código, árvores de derivação.
-
-Para avaliação de conceito dos estudantes foram atribuídas notas para
-a apresentação do seminário, para os problemas e duas avaliações escritas
-individuais e sem consultas.
-No caso dos problemas, a nota considerou assiduidade e participação dos
-estudantes nas discussões das sessões tutoriais e o produto produzido
-como solução para o problema.
-
-O problema ``O defeito nos computadores'' foi utilizado como demonstração
-aos estudantes do funcionamento da metodologia PBL e por não abordar
-especificamente nenhum conteúdo da disciplina não foi considerado para
-efeitos de avaliação dos estudantes, nem foi considerado para
-efeitos de análise deste estudo.
-
-Para este semestre os problemas aplicados para
-avaliação dos estudantes foram:
-\begin{enumerate}
-\item{Coleção de músicas}
-\item{A máquina de vender refrigerantes}
-\item{O controle de tráfego (com Autômatos Finitos com Pilha)}
-\item{O controle de tráfego (com Máquina de Turing)}
-\item{Uma função bastante curiosa}
-\item{P \textit{versus} NP (P = NP?)}
-\end{enumerate}
-
-Um detalhe a considerar é que embora as discussões referente ao sexto problema
-tenha seguido a metodologia PBL, ao estudante foi solicitado responder
-uma lista de exercícios referente as questões apresentadas ao longo
-do texto ao invés da produção de um produto solução para o problema.
-Esse problema não é considerado para efeitos análises e resultados
-deste estudo.
+\descricaoSemestre{68}{26}{32}{10}{1}{26}
+\descricaoSemestreProblemas{seis}{1}{O defeito nos computadores}{1}
 
 \section{Semestre 2017.1}
-Neste semestre foi utilizado uma abordagem híbrida com abordagem tradicional de ensino
-e aprendizagem, e metodologia PBL.
-
-A carga horária de 68 horas da disciplina no semestre foi dividida em:
-26 horas para a realização de sessões tutoriais de PBL em que foi conduzida a abordagem;
-32 horas para a realização de aulas expositivas em que o educador apresentou conceitos da disciplina;
-e 10 horas para a realização de avaliações tradicionais.
-
-A experiência aconteceu em uma sala de aula tradicional equipada com um
-quadro branco e com quadros adicionais feitos com papel metro colados nas paredes da sala.
-Nas sessões tutorias os estudantes foram distribuídos em grupos de cinco até dez participantes.
-Os grupos formaram semicírculos de forma que todos foram capazes de
-enxergar o quadro adicional referente ao grupo ao qual foi designado
-e tiveram interação dentro do grupo facilitada.
-
-Para este semestre foram 50 estudantes inscritos na disciplina.
+\descricaoSemestre{68}{26}{32}{10}{2}{50}
+\descricaoSemestreProblemas{seis}{2}{A torta e o ladrão de pimenta}{2}
 
 \section{Considerações finais}
