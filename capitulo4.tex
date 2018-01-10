@@ -1,3 +1,77 @@
+\newcommand{\perfilProblema}[4]{
+O problema ``#1'' foi o Problema #2 aplicado no semestre #3.
+Para esta aplicação foram #4 participantes a responder o questionário
+de pesquisa.}
+
+% caracterização de perfil dos participantes
+\newcommand{\perfilParticipanteBase}[6]{com a idade média do
+conjunto de participantes de #1 anos, onde o mais jovem possui
+#2 anos e o mais velho possui #3 anos.
+A maioria dos participantes está cursando #6,
+onde {\ifthenelse{\equal{#4}{0}}{nenhum dos}{{\ifthenelse{\equal{#4}{100,0}}{todos os}{#4\% dos}}}} participantes
+já desistiu desta disciplina de estudo antes e {\ifthenelse{\equal{#5}{0}}{nenhum dos}{{\ifthenelse{\equal{#5}{100,0}}{todos os}{#5\% dos}}}} participantes
+já desistiu de outras disciplinas.}
+
+
+\newcommand{\perfilParticipante}[7]{Este conjunto de participantes
+é predominantemente constituído de
+participantes do sexo masculino, sendo apenas uma participante do
+sexo feminino#7, \perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
+
+\newcommand{\perfilParticipanteA}[7]{Este conjunto de participantes
+tem maioria de participantes do sexo masculino,
+sendo do sexo feminino#7 participantes, \perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
+
+\newcommand{\perfilParticipanteB}[7]{Este conjunto de participantes
+tem participantes do sexo masculino e feminino em #7 proporção,
+\perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
+
+% gráfico de percepção dos participantes
+\newcommand{\figuraPercepcaoParticipante}[3]{
+
+A Figura~\ref{percep-#1} apresenta gráfico com os resultados referente
+as percepções dos participantes na aplicação do
+Problema #2 no semestre #3.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.22]{question-#1.eps}
+\caption{Percepções dos participantes do semestre #3 sobre o Problema #2}
+\label{percep-#1}
+\end{figure}
+}
+
+% gráficos de avaliação dos participantes
+\newcommand{\figuraPercepcaoParticipanteNotasBase}[3]{
+
+A Figura~\ref{aval-#1} apresenta o gráfico da
+avaliação do participantes para o Problema #2 aplicado no semestre #3.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.18]{notas-#1.eps}
+\caption{Avaliação dos participantes do semestre #3 para o Problema #2}
+\label{aval-#1}
+\end{figure}
+}
+
+\newcommand{\figuraPercepcaoParticipanteNotas}[7]{
+\figuraPercepcaoParticipanteNotasBase{#1}{#2}{#3}
+Podemos observar que a maioria dos participantes atribuíram
+notas altas para o Problema #2 no semestre #3, assim, #7 $#4\%$ das notas
+foram maiores ou iguais a $7,00$ e nenhuma nota foi menor que $#5$, com uma média
+de $#6$.
+}
+
+\newcommand{\figuraPercepcaoParticipanteNotasA}[7]{
+Apesar de nas afirmações de percepções o Problema #2 no semestre
+#3 não ter obtido os melhores resultados, no que diz respeito
+as notas para avalição dos problemas pelo participante,
+#7 $#4\%$ das notas foram maiores ou iguais a $7,00$, com
+uma média de $#6$.
+}
+
+
 \xchapter{Resultados}{} %sem preambulo
 \label{cap-resultados}
 % É recomendável utilizar `\acresetall' no início de cada capítulo para reiníciar o contator de referências às siglas.
