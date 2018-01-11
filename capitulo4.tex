@@ -71,36 +71,35 @@ as notas para avalição dos problemas pelo participante,
 uma média de $#6$.
 }
 
-\newcommand{\AvaliacaoHipoteseBase}[3]{
-Para avaliação da hipótese ``#1'', referenciada na
-Seção~\ref{sec-hipoteses} como item~\ref{#2} de #3, foi
+\newcommand{\AvaliacaoHipoteseBase}[3]{Para avaliação da hipótese ``#1'', referenciada na
+Seção~\ref{sec-hipoteses} como item~\ref{#2} de hipóteses
+{\ifthenelse{\equal{#3}{he}}{específicas}{gerais}}, foi
 considerada a favorabilidade para os resultados
 de percepção dos estudantes para}
 
-\newcommand{\AvaliacaoHipotese}[4]{
-\AvaliacaoHipoteseBase{#1}{#2}{#3} a afirmativa
+\newcommand{\AvaliacaoHipotese}[4]{\AvaliacaoHipoteseBase{#1}{#2}{#3} a afirmativa
 ``#4''.
 }
 
-\newcommand{\AvaliacaoHipoteseA}[5]{
-\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
+\newcommand{\AvaliacaoHipoteseA}[5]{\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
 ``#4'' e ``#5''.
 }
 
-\newcommand{\AvaliacaoHipoteseB}[6]{
-\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
+\newcommand{\AvaliacaoHipoteseB}[6]{\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
 ``#4'', ``#5'' e ``#6'' .
 }
 
-\newcommand{\AprovacaoHipotese}[3]{Ao analisar os
-resultados obtidos para as respostas
-dos participantes para as afirmativas de avaliação
+\newcommand{\AprovacaoHipotese}[4]{Ao analisar os resultados obtidos para as respostas
+dos participantes para a{\ifthenelse{\equal{#4}{1}}{s}{}}
+afirmativa{\ifthenelse{\equal{#4}{1}}{s}{}} de avaliação
 da hipótese, identificamos que a favorabilidade
-para #1as afirmativas #2atendem os critérios
+para #1a{\ifthenelse{\equal{#4}{1}}{s}{}}
+afirmativa{\ifthenelse{\equal{#4}{1}}{s}{}}
+#2atende{\ifthenelse{\equal{#4}{1}}{m}{}} os critérios
 previamente definidos em #3 replicações.}
 
-\newcommand{\AprovacaoHipoteseResultado}[4]{
-O resultado {\ifthenelse{\equal{#1}{0}}{}{não }}permite concluir
+\newcommand{\AprovacaoHipoteseResultado}[4]{O resultado
+{\ifthenelse{\equal{#1}{0}}{}{não }}permite concluir
 sobre a validade da hipótese com os critérios
 definidos{\ifthenelse{\equal{#2}{}}{.}{}
 {\ifthenelse{\equal{#3}{}}{ para o problema #2.}{
@@ -108,15 +107,16 @@ definidos{\ifthenelse{\equal{#2}{}}{.}{}
 { para os problemas ``#2'', ``#3'' e ``4''}}}}}
 }
 
-\newcommand{\HipoteseFavorabilidade}[4]{Para a afirmativa
-``#1'' na replicação do problema ``#2'' no
+\newcommand{\HipoteseFavorabilidade}[4]{Para a afirmativa ``#1''
+na replicação do problema ``#2'' no
 semestre #3 a percepção de favorabilidade,
 nos critérios definidos, ficou em $#4\%$.
 }
 
 \newcommand{\HipoteseFavorabilidadeDestaque}[4]{O
-principal destaque para esta avaliação está na afirmativa
-``#1'' na replicação do problema ``#2'' no
+principal destaque para esta avaliação
+está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
+replicação do problema ``#2'' no
 semestre #3 que a percepção de favorabilidade,
 nos critérios definidos, teve um
 atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}.
@@ -126,6 +126,21 @@ atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}.
 semestre #1 a percepção de favorabilidade para a questão em
 destaque, para este mesmo problema, teve um
 atingimento {\ifthenelse{\equal{#2}{100,0}}{também integral}{de $#2\%$}}.
+}
+
+\newcommand{\HipoteseFavorabilidadeDestaqueDiferencas}[4]{No
+caso do semestre #1 {\ifthenelse{\equal{#2}{100,0}}
+{não houve concordância em partes}{a concordância em partes foi de $#2\%$}},
+enquanto no semestre #3 {\ifthenelse{\equal{#4}{100,0}}
+{não houve concordância em partes}{a concordância em partes foi de $#4\%$}}.
+}
+
+\newcommand{\HipoteseFavorabilidadeDestaqueOutra}[4]{Outro destaque
+para esta avaliação está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
+replicação do problema ``#2'' no
+semestre #3 que a percepção de favorabilidade,
+nos critérios definidos, teve um
+atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}.
 }
 
 \xchapter{Resultados}{} %sem preambulo
@@ -335,6 +350,13 @@ aos resultados positivos.
 
 \section{Discussão}
 \label{sec-avaliacao-hipoteses}
+\AvaliacaoHipotese{\heatexto}{he1ref}{he}{\LikertPQ}
+\AprovacaoHipotese{}{}{todas}{0}
+\HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2017.1}{100,0}
+\HipoteseFavorabilidadeDestaqueContinuidade{2016.1}{100,0}
+\HipoteseFavorabilidadeDestaqueDiferencas{2016.1}{25,0}{2017.1}{100,0}
+\HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaD}{2016.1}{100}
+\HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,0}
 
 \section{Considerações finais}
 \label{sec-consideracoes-resultados}
