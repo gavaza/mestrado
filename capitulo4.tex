@@ -92,6 +92,42 @@ de percepção dos estudantes para}
 ``#4'', ``#5'' e ``#6'' .
 }
 
+\newcommand{\AprovacaoHipotese}[3]{Ao analisar os
+resultados obtidos para as respostas
+dos participantes para as afirmativas de avaliação
+da hipótese, identificamos que a favorabilidade
+para #1as afirmativas #2atendem os critérios
+previamente definidos em #3 replicações.}
+
+\newcommand{\AprovacaoHipoteseResultado}[4]{
+O resultado {\ifthenelse{\equal{#1}{0}}{}{não }}permite concluir
+sobre a validade da hipótese com os critérios
+definidos{\ifthenelse{\equal{#2}{}}{.}{}
+{\ifthenelse{\equal{#3}{}}{ para o problema #2.}{
+{\ifthenelse{\equal{#4}{}}{ para os problemas #2 e #3.}
+{ para os problemas ``#2'', ``#3'' e ``4''}}}}}
+}
+
+\newcommand{\HipoteseFavorabilidade}[4]{Para a afirmativa
+``#1'' na replicação do problema ``#2'' no
+semestre #3 a percepção de favorabilidade,
+nos critérios definidos, ficou em $#4\%$.
+}
+
+\newcommand{\HipoteseFavorabilidadeDestaque}[4]{O
+principal destaque para esta avaliação está na afirmativa
+``#1'' na replicação do problema ``#2'' no
+semestre #3 que a percepção de favorabilidade,
+nos critérios definidos, teve um
+atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}.
+}
+
+\newcommand{\HipoteseFavorabilidadeDestaqueContinuidade}[2]{No
+semestre #1 a percepção de favorabilidade para a questão em
+destaque, para este mesmo problema, teve um
+atingimento {\ifthenelse{\equal{#2}{100,0}}{também integral}{de $#2\%$}}.
+}
+
 \xchapter{Resultados}{} %sem preambulo
 \label{cap-resultados}
 % É recomendável utilizar `\acresetall' no início de cada capítulo para reiníciar o contator de referências às siglas.
@@ -276,7 +312,7 @@ que foram atribuídas para uma determinada nota, ou seja,
 o tamanho da barra.
 No caso de $y_2$ o significado é do percentil igual ou superior
 (não inferior) a um determinado valor, isto é,
-qual a porcentagem da distribuição das barras que é superior
+qual a porcentagem da distribuição das barras que é igual ou superior
 a uma determinada nota.
 
 Para as conclusões apresentadas neste trabalho sobre percepção foi
