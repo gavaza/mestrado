@@ -74,14 +74,14 @@ Seção~\ref{sec-hipoteses} como item~\ref{#2} de hipóteses
 considerada a favorabilidade para os resultados
 de percepção dos estudantes para}
 
-\newcommand{\AvaliacaoHipotese}[4]{\AvaliacaoHipoteseBase{#1}{#2}{#3} a afirmativa
-``#4''.}
-
-\newcommand{\AvaliacaoHipoteseA}[5]{\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
-``#4'' e ``#5''.}
-
-\newcommand{\AvaliacaoHipoteseB}[6]{\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
-``#4'', ``#5'' e ``#6'' .}
+\newcommand{\AvaliacaoHipotese}[9]{\AvaliacaoHipoteseBase{#1}{#2}{#3}
+a{\ifthenelse{\equal{#5}{}}{}{s}}
+afirmativa{\ifthenelse{\equal{#5}{}}{}{s}}
+#4%
+{\ifthenelse{\equal{#5}{}}{}{{\ifthenelse{\equal{#6}{}}{ e #5}%
+{, #5{\ifthenelse{\equal{#7}{}}{ e #6}{%
+{, #6{\ifthenelse{\equal{#8}{}}{ e #7}{%
+{, #7{\ifthenelse{\equal{#9}{}}{ e #8}{, #8  e #9}}}}}}}}}}}}.}
 
 \newcommand{\AprovacaoHipotese}[5]{Ao analisar os resultados obtidos para as respostas
 dos participantes {\ifthenelse{\equal{#5}{}}{}{do semestre #5}} para
@@ -121,7 +121,7 @@ participantes sobre a concordância}{, sendo $#5\%$ a
 concordância integral}}}.}
 
 \newcommand{\HipoteseFavorabilidadeDestaqueContinuidade}[3]{No
-semestre #1 a percepção de favorabilidade para a afirmatição em
+semestre #1 a percepção de favorabilidade para a afirmação em
 destaque, para {\ifthenelse{\equal{#3}{}}{este mesmo problema}{os mesmos problemas}},
 {\ifthenelse{\equal{#3}{}}{teve um}{tiveram, respectivamente,}}
 atingimento {\ifthenelse{\equal{#2}{100,0}}{integral}{de $#2\%$}}
@@ -356,7 +356,7 @@ Para responder as hipóteses as quais este estudo se propõe, utilizamos
 os resultados apresentados neste capítulo.
 
 % HE1
-\AvaliacaoHipotese{\heatexto}{he1ref}{he}{\LikertPQ}
+\AvaliacaoHipotese{\heatexto}{he1ref}{he}{``\LikertPQ'' (Q)}{}{}{}{}{}
 \AprovacaoHipotese{}{}{todas}{0}{}
 \HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2017.1}{100,0}{}{}
 \HipoteseFavorabilidadeDestaqueContinuidade{2016.1}{100,0}{}
@@ -366,7 +366,7 @@ os resultados apresentados neste capítulo.
 \AprovacaoHipoteseResultado{}{}{}{}{}
 
 % HE2
-\AvaliacaoHipotese{\hebtexto}{he2ref}{he}{\LikertPM}
+\AvaliacaoHipotese{\hebtexto}{he2ref}{he}{``\LikertPM'' (M)}{}{}{}{}{}
 \AprovacaoHipotese{}{não}{3}{0}{}
 \AprovacaoHipoteseResultado{não}{\ProblemaB}{\ProblemaC}{\ProblemaE}{2016.1}
 Em nosso trabalho \cite{gavaza2017}, que utilizamos apenas dados do
@@ -385,13 +385,24 @@ de até dez participantes cada.
 % escrever sobre a redução no grupo tutorial e qual a conclusão
 
 % HE3
-\AvaliacaoHipotese{\hectexto}{he3ref}{he}{\LikertPT}
+\AvaliacaoHipotese{\hectexto}{he3ref}{he}{``\LikertPT'' (T)}{}{}{}{}{}
 \AprovacaoHipotese{}{}{todas}{0}{}
 \HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2016.1}{100,0}{50,0}{\ProblemaD}
 \HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,9}{80,0}
 \HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaG}{2017.1}{91,7}{91,7}
 \ProblemaSemReplica{2016.1}
 \AprovacaoHipoteseResultado{}{}{}{}{}
+
+% HE4
+\AvaliacaoHipotese{\hedtexto}{he4ref}{he}{``\LikertPC'' (C)}{``\LikertPD'' (D)}
+{``\LikertPG'' (G)}{``\LikertPK'' (K)}{``\LikertPO'' (O)}{``\LikertPP'' (P)}
+
+% HE5
+\AvaliacaoHipotese{\heetexto}{he5ref}{he}{``\LikertPU'' (U)}{``\LikertPV'' (V)}
+{``\LikertPW'' (W)}{}{}{}
+
+% HE5
+\AvaliacaoHipotese{\heftexto}{he6ref}{he}{``\LikertPI'' (U)}{}{}{}{}{}
 
 \section{Considerações finais}
 \label{sec-consideracoes-resultados}
