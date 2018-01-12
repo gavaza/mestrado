@@ -52,24 +52,21 @@ avaliação do participantes para o Problema #2 aplicado no semestre #3.
 \includegraphics[scale=0.18]{notas-#1.eps}
 \caption{Avaliação dos participantes do semestre #3 para o Problema #2}
 \label{aval-#1}
-\end{figure}
-}
+\end{figure}}
 
 \newcommand{\figuraPercepcaoParticipanteNotas}[7]{
 \figuraPercepcaoParticipanteNotasBase{#1}{#2}{#3}
 Podemos observar que a maioria dos participantes atribuíram
 notas altas para o Problema #2 no semestre #3, assim, #7 $#4\%$ das notas
 foram maiores ou iguais a $7,00$ e nenhuma nota foi menor que $#5$, com uma média
-de $#6$.
-}
+de $#6$.}
 
 \newcommand{\figuraPercepcaoParticipanteNotasA}[7]{
 Apesar de nas afirmações de percepções o Problema #2 no semestre
 #3 não ter obtido os melhores resultados, no que diz respeito
 as notas para avalição dos problemas pelo participante,
 #7 $#4\%$ das notas foram maiores ou iguais a $7,00$, com
-uma média de $#6$.
-}
+uma média de $#6$.}
 
 \newcommand{\AvaliacaoHipoteseBase}[3]{Para avaliação da hipótese ``#1'', referenciada na
 Seção~\ref{sec-hipoteses} como item~\ref{#2} de hipóteses
@@ -78,16 +75,13 @@ considerada a favorabilidade para os resultados
 de percepção dos estudantes para}
 
 \newcommand{\AvaliacaoHipotese}[4]{\AvaliacaoHipoteseBase{#1}{#2}{#3} a afirmativa
-``#4''.
-}
+``#4''.}
 
 \newcommand{\AvaliacaoHipoteseA}[5]{\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
-``#4'' e ``#5''.
-}
+``#4'' e ``#5''.}
 
 \newcommand{\AvaliacaoHipoteseB}[6]{\AvaliacaoHipoteseBase{#1}{#2}{#3} as afirmativas
-``#4'', ``#5'' e ``#6'' .
-}
+``#4'', ``#5'' e ``#6'' .}
 
 \newcommand{\AprovacaoHipotese}[5]{Ao analisar os resultados obtidos para as respostas
 dos participantes {\ifthenelse{\equal{#5}{}}{}{do semestre #5}} para
@@ -112,41 +106,44 @@ definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
 \newcommand{\HipoteseFavorabilidade}[4]{Para a afirmativa ``#1''
 na replicação do problema ``#2'' no
 semestre #3 a percepção de favorabilidade,
-nos critérios definidos, ficou em $#4\%$.
-}
+nos critérios definidos, ficou em $#4\%$.}
 
-\newcommand{\HipoteseFavorabilidadeDestaque}[5]{O
-principal destaque para esta avaliação
-está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
-replicação do problema ``#2''
+\newcommand{\HipoteseFavorabilidadeDestaque}[6]{O{\ifthenelse{\equal{#6}{}}{}{s}}
+principa{\ifthenelse{\equal{#6}{}}{l}{is}} destaque{\ifthenelse{\equal{#6}{}}{}{s}} para esta avaliação
+est{\ifthenelse{\equal{#6}{}}{á}{ão}}{\ifthenelse{\equal{#1}{}}{}{ na afirmativa``#1''}} na
+replicação do problema ``#2''%
+{\ifthenelse{\equal{#6}{}}{}{ e do problema ``#6''}}%
 {\ifthenelse{\equal{#3}{}}{}{ no semestre #3}} que a percepção de favorabilidade,
-nos critérios definidos, teve um
+nos critérios definidos, {\ifthenelse{\equal{#6}{}}{teve um}{tiveram}}
 atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}%
 {\ifthenelse{\equal{#5}{}}{}{\ifthenelse{\equal{#5}{100,0}}{, com consenso dos
 participantes sobre a concordância}{, sendo $#5\%$ a
-concordância integral}}}.
-}
+concordância integral}}}.}
 
-\newcommand{\HipoteseFavorabilidadeDestaqueContinuidade}[2]{No
-semestre #1 a percepção de favorabilidade para a questão em
-destaque, para este mesmo problema, teve um
-atingimento {\ifthenelse{\equal{#2}{100,0}}{também integral}{de $#2\%$}}.
-}
+\newcommand{\HipoteseFavorabilidadeDestaqueContinuidade}[3]{No
+semestre #1 a percepção de favorabilidade para a afirmatição em
+destaque, para {\ifthenelse{\equal{#3}{}}{este mesmo problema}{os mesmos problemas}},
+{\ifthenelse{\equal{#3}{}}{teve um}{tiveram, respectivamente,}}
+atingimento {\ifthenelse{\equal{#2}{100,0}}{integral}{de $#2\%$}}
+{\ifthenelse{\equal{#3}{}}{}{{\ifthenelse{\equal{#3}{100,0}}{também integral}{e $#3\%$}}}}.}
 
 \newcommand{\HipoteseFavorabilidadeDestaqueDiferencas}[4]{No
 caso do semestre #1 {\ifthenelse{\equal{#2}{100,0}}
 {não houve concordância em partes}{a concordância em partes foi de $#2\%$}},
 enquanto no semestre #3 {\ifthenelse{\equal{#4}{100,0}}
-{não houve concordância em partes}{a concordância em partes foi de $#4\%$}}.
-}
+{não houve concordância em partes}{a concordância em partes foi de $#4\%$}}.}
 
-\newcommand{\HipoteseFavorabilidadeDestaqueOutra}[4]{Outro destaque
+\newcommand{\HipoteseFavorabilidadeDestaqueOutra}[5]{Outro destaque
 para esta avaliação está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
 replicação do problema ``#2'' no
 semestre #3 que a percepção de favorabilidade,
 nos critérios definidos, teve um
-atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}.
-}
+atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}%
+{\ifthenelse{\equal{#5}{}}{}%
+{{\ifthenelse{\equal{#5}{#4}}{, sem concordância em partes}%
+{, sendo de $#5\%$ a concordância em partes}}}}.}
+
+\newcommand{\ProblemaSemReplica}[1]{O problema não foi replicado no semestre #1.}
 
 \xchapter{Resultados}{} %sem preambulo
 \label{cap-resultados}
@@ -358,16 +355,17 @@ aos resultados positivos.
 Para responder as hipóteses as quais este estudo se propõe, utilizamos
 os resultados apresentados neste capítulo.
 
+% HE1
 \AvaliacaoHipotese{\heatexto}{he1ref}{he}{\LikertPQ}
 \AprovacaoHipotese{}{}{todas}{0}{}
-\HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2017.1}{100,0}{}
-\HipoteseFavorabilidadeDestaqueContinuidade{2016.1}{100,0}
+\HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2017.1}{100,0}{}{}
+\HipoteseFavorabilidadeDestaqueContinuidade{2016.1}{100,0}{}
 \HipoteseFavorabilidadeDestaqueDiferencas{2016.1}{25,0}{2017.1}{100,0}
-\HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaD}{2016.1}{100}
-\HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,0}
+\HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaD}{2016.1}{100}{}
+\HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,0}{}
 \AprovacaoHipoteseResultado{}{}{}{}{}
 
-
+% HE2
 \AvaliacaoHipotese{\hebtexto}{he2ref}{he}{\LikertPM}
 \AprovacaoHipotese{}{não}{3}{0}{}
 \AprovacaoHipoteseResultado{não}{\ProblemaB}{\ProblemaC}{\ProblemaE}{2016.1}
@@ -383,8 +381,17 @@ Para o semestre 2017.1, como descrito na Seção ~\ref{sec-exp-2017}, foram
 utilizados quadros adicionais e foram formados grupos menores,
 de até dez participantes cada.
 \AprovacaoHipotese{}{}{todas}{0}{2017.1}
-\HipoteseFavorabilidadeDestaque{}{\ProblemaE}{}{100,0}{85,7}
+\HipoteseFavorabilidadeDestaque{}{\ProblemaE}{}{100,0}{85,7}{}
 % escrever sobre a redução no grupo tutorial e qual a conclusão
+
+% HE3
+\AvaliacaoHipotese{\hectexto}{he3ref}{he}{\LikertPT}
+\AprovacaoHipotese{}{}{todas}{0}{}
+\HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2016.1}{100,0}{50,0}{\ProblemaD}
+\HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,9}{80,0}
+\HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaG}{2017.1}{91,7}{91,7}
+\ProblemaSemReplica{2016.1}
+\AprovacaoHipoteseResultado{}{}{}{}{}
 
 \section{Considerações finais}
 \label{sec-consideracoes-resultados}
