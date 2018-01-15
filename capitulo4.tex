@@ -222,13 +222,13 @@ específicas e depois os resultados para as hispóteses gerais.
 \HipoteseFavorabilidadeDestaqueDiferencas{2016.1}{25,0}{2017.1}{100,0}
 \HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaD}{2016.1}{100}{}
 \HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,0}{}
-\AprovacaoHipoteseResultado{}{}{}{}{}
+\AprovacaoHipoteseResultado{}{}{}{}{}{}{}{}{}
 
 % HE2
 \AvaliacaoHipotese{\hebtexto}{he2ref}{he}{``\LikertPM'' (M)}{}{}{}{}{}
 
 \AprovacaoHipotese{}{não}{3}{0}{}
-\AprovacaoHipoteseResultado{não}{\ProblemaB}{\ProblemaC}{\ProblemaE}{2016.1}
+\AprovacaoHipoteseResultado{não}{\ProblemaB}{\ProblemaC}{\ProblemaE}{2016.1}{}{}{}{}
 Em nosso trabalho \cite{gavaza2017}, que utilizamos apenas dados do
 semestre 2016.1, apesar de não termos definidos parâmetros
 de avaliação, percebemos que a percepção dos estudantes com relação
@@ -252,7 +252,7 @@ de até dez participantes cada.
 \HipoteseFavorabilidadeDestaqueContinuidade{2017.1}{90,9}{80,0}
 \HipoteseFavorabilidadeDestaqueOutra{}{\ProblemaG}{2017.1}{91,7}{91,7}
 \ProblemaSemReplica{2016.1}{}
-\AprovacaoHipoteseResultado{}{}{}{}{}
+\AprovacaoHipoteseResultado{}{}{}{}{}{}{}{}{}
 
 % HE4
 \AvaliacaoHipotese{\hedtexto}{he4ref}{he}{``\LikertPC'' (C)}{``\LikertPD'' (D)}
@@ -262,17 +262,40 @@ de até dez participantes cada.
 \ProblemaSemReplica{2016.1}{\ProblemaG}
 \HipoteseNaoAtende{\ProblemaB}{2017.1}{(C)}{(D)}{(P)}{}{}{}{}
 \HipoteseAtende{\ProblemaB}{2016.1}{p}
-\AprovacaoHipoteseResultado{não}{\ProblemaG}{\ProblemaB}{}{2017.1}
+\AprovacaoHipoteseResultado{não}{\ProblemaG}{\ProblemaB}{}{2017.1}{}{}{}{}
 
 % HE5
 \AvaliacaoHipotese{\heetexto}{he5ref}{he}{``\LikertPU'' (U)}{``\LikertPV'' (V)}
 {``\LikertPW'' (W)}{}{}{}
 
+\HipoteseNaoAtende{\ProblemaG}{2017.1}{(W)}{}{}{}{}{}{}
+\HipoteseAtende{\ProblemaG}{2016.1}{p}
+\HipoteseNaoAtende{\ProblemaB}{2017.1}{(W)}{}{}{}{}{}{}
+\HipoteseAtende{\ProblemaB}{2016.1}{p}
+\HipoteseNaoAtende{\ProblemaC}{2017.1}{(W)}{}{}{}{}{}{}
+\HipoteseAtende{\ProblemaC}{2016.1}{p}
+\HipoteseNaoAtende{\ProblemaE}{2017.1}{(W)}{}{}{}{}{}{}
+\HipoteseAtende{\ProblemaE}{2016.1}{p}
+A favorabilidade não foi atingida em 4 das 5 replicações no
+semestre 2017.1.
+
 % HE6
-\AvaliacaoHipotese{\heftexto}{he6ref}{he}{``\LikertPI'' (U)}{}{}{}{}{}
+\AvaliacaoHipotese{\heftexto}{he6ref}{he}{``\LikertPI'' (I)}{}{}{}{}{}
+
+\AprovacaoHipotese{}{}{todas}{0}{}
+\HipoteseFavorabilidadeDestaque{}{\ProblemaC}{2017.1}{100,0}{90,9}{}
+\HipoteseFavorabilidadeDestaqueContinuidade{2016.1}{75,0}{}
+\MaisDestaque{4}{5}{2017.1}{85,8}{\ProblemaE}
+\AprovacaoHipoteseResultado{}{}{}{}{}{}{}{}{}
 
 % HE7
 \AvaliacaoHipotese{\hegtexto}{he7ref}{he}{``\LikertPA'' (A)}{``\LikertPB'' (B)}{}{}{}{}
+
+\HipoteseNaoAtende{\ProblemaE}{2016.1}{(B)}{}{}{}{}{}{}
+\HipoteseAtende{\ProblemaE}{2017.1}{p}
+\HipoteseNaoAtende{\ProblemaG}{2017.1}{(B)}{}{}{}{}{}{}
+\ProblemaSemReplica{2017.1}{\ProblemaG}
+\AprovacaoHipoteseResultado{não}{\ProblemaE}{}{}{2016.1}{\ProblemaG}{}{}{2017.1}
 
 \section{Considerações finais}
 \label{sec-consideracoes-resultados}

@@ -87,15 +87,20 @@ afirmativa{\ifthenelse{\equal{#4}{1}}{s}{}}
 {\ifthenelse{\equal{#2}{}}{}{#2 }}atende{\ifthenelse{\equal{#4}{1}}{m}{}} os critérios
 previamente definidos em {\ifthenelse{\equal{#3}{1}}{apenas uma replicação}{#3 replicações}}.}
 
-\newcommand{\AprovacaoHipoteseResultado}[5]{Os resultados
+\newcommand{\AprovacaoHipoteseResultado}[9]{Os resultados
 {\ifthenelse{\equal{#1}{}}{}{#1 }}permitem concluir
 sobre a validade da hipótese com os critérios
 definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
-{para o problema #2}
+{para o problema ``#2''}
 {{\ifthenelse{\equal{#4}{}}
 {para os problemas ``#2'' e ``#3''}
 {para os problemas ``#2'', ``#3'' e ``#4''}}}}}}%
-{\ifthenelse{\equal{#5}{}}{}{ na replicação do semestre #5}}.}
+{\ifthenelse{\equal{#5}{}}{}{ na replicação do semestre #5}}%
+{\ifthenelse{\equal{#6}{}}{}{
+{\ifthenelse{\equal{#7}{}}
+{ e para o problema ``#6''}{\ifthenelse{\equal{#8}{}}{
+{para os problemas ``#6'' e ``#7''}
+{para os problemas ``#6'', ``#7'' e ``#8''}}}} no semestre #9}}.}
 
 \newcommand{\HipoteseFavorabilidade}[4]{Para a afirmativa ``#1''
 na replicação do problema ``#2'' no
@@ -118,8 +123,8 @@ concordância integral}}}.}
 semestre #1 a percepção de favorabilidade para a afirmação em
 destaque, para {\ifthenelse{\equal{#3}{}}{este mesmo problema}{os mesmos problemas}},
 {\ifthenelse{\equal{#3}{}}{teve um}{tiveram, respectivamente,}}
-atingimento {\ifthenelse{\equal{#2}{100,0}}{integral}{de $#2\%$}}
-{\ifthenelse{\equal{#3}{}}{}{{\ifthenelse{\equal{#3}{100,0}}{também integral}{e $#3\%$}}}}.}
+atingimento {\ifthenelse{\equal{#2}{100,0}}{integral}{de $#2\%$}}%
+{\ifthenelse{\equal{#3}{}}{}{{\ifthenelse{\equal{#3}{100,0}}{ também integral}{ e $#3\%$}}}}.}
 
 \newcommand{\HipoteseFavorabilidadeDestaqueDiferencas}[4]{No
 caso do semestre #1 {\ifthenelse{\equal{#2}{100,0}}
@@ -164,3 +169,8 @@ Na replicação do problema ``#1''%
 {\ifthenelse{\equal{#2}{}}{}{, no semestre #2,}}
 a favorabilidade atinge os critérios para
 {\ifthenelse{\equal{#3}{s}}{a afirmativa}{todas as afirmativas}}.}
+
+\newcommand{\MaisDestaque}[5]{%
+Também é destaque que em #1 das #2 replicações o antigimento da
+favorabilidade foi integral no semestre #3, sendo o resultado menos
+favorável de $#4\%$ no problema ``#5''.}
