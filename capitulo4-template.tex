@@ -12,7 +12,7 @@ e #8 estudantes foram reprovados por conceito.
 \newcommand{\perfilProblema}[4]{
 O problema ``#1'' foi o Problema #2 aplicado no semestre #3.
 Para esta aplicação foram #4 participantes a responder o questionário
-de pesquisa.}
+de pesquisa sobre a percepção do problema.}
 
 % caracterização de perfil dos participantes
 \newcommand{\perfilParticipanteBase}[6]{com a idade média do
@@ -33,9 +33,19 @@ sexo feminino#7, \perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
 tem maioria de participantes do sexo masculino,
 sendo do sexo feminino#7 participantes, \perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
 
-\newcommand{\perfilParticipanteB}[7]{Este conjunto de participantes
+\newcommand{\perfilParticipanteB}[7]{Este conjunto
 tem participantes do sexo masculino e feminino em #7 proporção,
 \perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
+
+\newcommand{\perfilParticipanteC}[7]{Este conjunto
+tem participantes apenas do sexo masculino,
+\perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
+
+\newcommand{\perfilParticipanteD}[5]{O participante
+é do sexo #1, tem #2 anos, está cursando o #3 semestre%
+{\ifthenelse{\equal{#4}{}}{}{
+#4 desistiu da disciplina de estudo antes e #5
+desistiu de outros disciplinas antes}}.}
 
 % gráfico de percepção dos participantes
 \newcommand{\figuraPercepcaoParticipante}[3]{
@@ -203,3 +213,22 @@ a favorabilidade atinge os critérios para
 Também é destaque que em #1 das #2 replicações o antigimento da
 favorabilidade foi integral no semestre #3, sendo o resultado menos
 favorável de $#4\%$ no problema ``#5''.}
+
+\newcommand{\QtdParticipantes}[4]{%
+No semestre #1, entre os #2 estudantes que
+{\ifthenelse{\equal{#3}{0}}{desistiram da}{concluiram a}}
+disciplina, {\ifthenelse{\equal{#4}{1}}%
+{apenas um participante respondeu}%
+{foram #4 participantes a responder}}
+o questionário de pesquisa sobre
+a percepção geral da disciplina.}
+
+\newcommand{\AprovacaoMetodologia}[2]{%
+No que diz respeito a aprovação da metodologia para
+a condução da disciplina,
+{\ifthenelse{\equal{#1}{100,0}}{todos os}%
+{{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
+participantes #2 mencionaram, em algum nível,
+{\ifthenelse{\equal{#2}{desistentes}}%
+{desistência por desagrado}{agrado}} com a metodologia.
+}
