@@ -223,12 +223,44 @@ disciplina, {\ifthenelse{\equal{#4}{1}}%
 o questionário de pesquisa sobre
 a percepção geral da disciplina.}
 
-\newcommand{\AprovacaoMetodologia}[2]{%
-No que diz respeito a aprovação da metodologia para
-a condução da disciplina,
+\newcommand{\AprovacaoDisciplina}[5]{%
+No que diz respeito a #3 condução da disciplina (#5),
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
 participantes #2 mencionaram, em algum nível,
 {\ifthenelse{\equal{#2}{desistentes}}%
-{desistência por desagrado}{agrado}} com a metodologia.
-}
+{desistência por desagrado}{satisfação}} com #4.}
+
+\newcommand{\AprovacaoDisciplinaA}[3]{Para
+{\ifthenelse{\equal{#1}{100,0}}{todos os}%
+{{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
+participantes a consideração foi que, em algum nível, #2 (#3).}
+
+\newcommand{\AprovacaoDisciplinaB}[5]{%
+Foi expressado o desejo de, em algum nível, #2 (#3) por
+{\ifthenelse{\equal{#1}{100,0}}{todos os}%
+{{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
+participantes%
+{\ifthenelse{\equal{#5}{}}{}{,{\ifthenelse{\equal{#5}{0,0}}{sem nenhuma
+contrariedade declarada}{onde #4 $#5\%$ discorda, em
+algum nível, desta opção}}}}.}
+
+\newcommand{\AprovacaoDisciplinaC}[2]{%
+A maioria dos participantes responderam que gostaram de
+ter a presença (CB) e a participação (CC) em sala de aula
+como critérios de avaliação sendo, respectivamente,
+$#1\%$ e $#2\%$ os que concordaram, em algum nível, com as afirmações.}
+
+\newcommand{\AprovacaoDisciplinaD}[3]{%
+{\ifthenelse{\equal{#1}{100,0}}{Todos os}%
+{{\ifthenelse{\equal{#1}{0,0}}{Nenhum dos}{}}}}
+participantes {{\ifthenelse{\equal{#1}{0,0}}{diz}{dizem}}} gostar de #2 (#3).}
+
+\newcommand{\AprovacaoDisciplinaE}[3]{%
+Dizem gostar de #2 (#3) $#1\%$ dos participantes.}
+
+\newcommand{\AprovacaoDisciplinaF}[3]{%
+A maioria dos participantes entende que #2 (#3), onde
+{\ifthenelse{\equal{#1}{100,0}}{todos os}%
+{{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$}}}}
+participantes concordaram, em algum nível, com a afirmação.}
