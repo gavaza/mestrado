@@ -66,7 +66,7 @@ Problema #2 no semestre #3.
 \newcommand{\figuraPercepcaoParticipanteDisciplina}[3]{
 
 A Figura~\ref{percep-#1} apresenta um gráfico com os resultados referentes
-a percepção geral do participantes #2 do semestre #3 sobre a disciplina.
+a percepção geral dos participantes #2 do semestre #3 sobre a disciplina.
 
 \begin{figure}[!htb]
 \centering
@@ -261,11 +261,13 @@ disciplina, {\ifthenelse{\equal{#4}{1}}%
 o questionário de pesquisa sobre
 a percepção geral da disciplina.}
 
-\newcommand{\AprovacaoDisciplina}[5]{%
-No que diz respeito a #3 condução da disciplina (#5),
+\newcommand{\AprovacaoDisciplina}[7]{%
+{\ifthenelse{\equal{#6}{}}{No}{Para o semestre #6, os #7, no}}
+que diz respeito a #3 condução da disciplina (#5),
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
-participantes #2 mencionaram, em algum nível,
+participantes{\ifthenelse{\equal{#2}{}}{}{ #2}}
+mencionaram, em algum nível,
 {\ifthenelse{\equal{#2}{desistentes}}%
 {desistência por desagrado}{satisfação}} com #4.}
 
@@ -297,8 +299,17 @@ participantes {{\ifthenelse{\equal{#1}{0,0}}{diz}{dizem}}} gostar de #2 (#3).}
 \newcommand{\AprovacaoDisciplinaE}[3]{%
 Dizem gostar de #2 (#3) $#1\%$ dos participantes.}
 
-\newcommand{\AprovacaoDisciplinaF}[3]{%
-A maioria dos participantes entende que #2 (#3), onde
+\newcommand{\AprovacaoDisciplinaF}[4]{%
+A maioria dos participantes
+entende que{\ifthenelse{\equal{#4}{}}{}{ #4}} #2
+(#3), onde
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$}}}}
 participantes concordaram, em algum nível, com a afirmação.}
+
+\newcommand{\AprovacaoDisciplinaG}[5]{%
+No semestre #1, #2 entre os #3 participantes
+que concluiram a disciplina consideraram a
+atividade profissional deles durante o semestre (#5),
+para $#4\%$ destes foi possível, em algum nível,
+conciliar este trabalho com a disciplina.}
