@@ -103,6 +103,44 @@ as notas para avalição dos problemas pelo participante,
 #7 $#4\%$ das notas foram maiores ou iguais a $7,00$, com
 uma média de $#6$.}
 
+% gráficos de avaliação dos participantes para a disciplina
+\newcommand{\figuraPercepcaoParticipanteDisciplinaNotasBase}[3]{
+
+A Figura~\ref{aval-#1} apresenta um gráfico com a
+avaliação dos participantes #2 do semestre #3 sobre a disciplina.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.18]{notas-#1.eps}
+\caption{Avaliação dos participantes #2 do semestre #3 sobre a disciplina}
+\label{aval-#1}
+\end{figure}}
+
+\newcommand{\figuraPercepcaoParticipanteDisciplinaNotas}[7]{
+\figuraPercepcaoParticipanteDisciplinaNotasBase{#1}{#2}{#3}
+Podemos observar que a maioria dos participantes #2 atribuíram
+notas altas para avaliar a disciplina no semestre #3, onde,%
+{\ifthenelse{\equal{#7}{}}{}{ #7}}
+{\ifthenelse{\equal{#4}{100,0}}{todas as}{$#4\%$ das}}
+notas foram maiores ou iguais a $7,00$%
+{\ifthenelse{\equal{#5}{}}{}{ e nenhuma nota foi menor que $#5$}},
+com uma média de $#6$.}
+
+\newcommand{\figuraPercepcaoParticipanteDisciplinaNotasA}[7]{
+\figuraPercepcaoParticipanteDisciplinaNotasBase{#1}{#2}{#3}
+Podemos observar que os participantes #2 não atribuíram
+notas altas para avaliar a disciplina no semestre #3, onde,%
+{\ifthenelse{\equal{#7}{}}{}{ #7}}
+{\ifthenelse{\equal{#4}{100,0}}{todas as}{$#4\%$ das}}
+notas foram maiores ou iguais a $7,00$%, 
+{\ifthenelse{\equal{#5}{}}{}{, mas nenhuma nota foi menor que $#5$}},
+com uma média de $#6$.}
+
+\newcommand{\SemFiguraPercepcaoParticipanteDisciplinaNotas}[2]{
+Como existe dados para apenas um participante #1
+em avaliação sobre a disciplina no semestre #2, não foi
+construído gráfico.}
+
 \newcommand{\AvaliacaoHipoteseBase}[3]{Para avaliação da hipótese ``#1'', referenciada na
 Seção~\ref{sec-hipoteses} como item~\ref{#2} de hipóteses
 {\ifthenelse{\equal{#3}{he}}{específicas}{gerais}}, foi
@@ -241,7 +279,7 @@ Foi expressado o desejo de, em algum nível, #2 (#3) por
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
 participantes%
-{\ifthenelse{\equal{#5}{}}{}{,{\ifthenelse{\equal{#5}{0,0}}{sem nenhuma
+{\ifthenelse{\equal{#5}{}}{}{,{\ifthenelse{\equal{#5}{0,0}}{ sem nenhuma
 contrariedade declarada}{onde #4 $#5\%$ discorda, em
 algum nível, desta opção}}}}.}
 
