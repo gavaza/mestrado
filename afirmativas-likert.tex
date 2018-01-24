@@ -4,15 +4,27 @@
                                         \item{Sim}
                                 \end{itemize}
                                 }
-\newcommand{\AfirmacaoLikert}[1]{\item{#1}
-				\begin{itemize}
+\newcommand{\AfirmacaoLikertBase}{%
                                         \item{Discordo}
                                         \item{Discordo parcialmente}
                                         \item{Indiferente}
                                         \item{Concordo parcialmente}
                                         \item{Concordo}
-				\end{itemize}
                                 }
+
+\newcommand{\AfirmacaoLikert}[1]{\item{#1}
+                                \begin{itemize}
+				\AfirmacaoLikertBase
+				\end{itemize}
+}
+
+\newcommand{\AfirmacaoLikertA}[1]{\item{#1}
+                                \begin{itemize}
+				\AfirmacaoLikertBase
+				\item{Não tive trabalho neste período}
+				\end{itemize}
+}
+
 % form problemas
 \newcommand{\LikertPA}{A construção da solução envolveu
 a elaboração, análise e exposição clara e racional de argumentos.}
