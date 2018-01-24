@@ -1,2 +1,123 @@
+\newcommand{\contribuicoesQualitativas}[7]{%
+{\ifthenelse{\equal{#5}{}}{O problema ``#1'' foi
+replicado apenas no semestre #2 e}{
+Na replicação do problema ``#1'' no semestre #2}}
+foram recebidas contribuições discursivas%
+{\ifthenelse{\equal{#3}{zero}}{}{ de #3
+participante{\ifthenelse{\equal{#3}{um}}{}{s}}
+sobre o problema{\ifthenelse{\equal{#4}{zero}}{}{ e}}}}%
+{\ifthenelse{\equal{#4}{zero}}{}{ de #4
+participante{\ifthenelse{\equal{#4}{um}}{}{s}}
+sobre a metodologia PBL}}.%
+{\ifthenelse{\equal{#5}{}}{}{
+No semestre #5
+{\ifthenelse{\equal{#6}{zero}}{{\ifthenelse{\equal{#7}{zero}}{não }{}}{}}{}}%
+foram recebidas contribuições discursivas%
+{\ifthenelse{\equal{#6}{zero}}{}{ de #6
+participante{\ifthenelse{\equal{#6}{um}}{}{s}}
+sobre o problema{\ifthenelse{\equal{#7}{zero}}{}{ e}}}}%
+{\ifthenelse{\equal{#7}{zero}}{}{ de #7
+participante{\ifthenelse{\equal{#7}{um}}{}{s}}
+sobre a metodologia PBL}}.}}}
+
+\newcommand{\contribuicoesQualitativasDisciplina}[5]{%
+Entre os #1 estudantes #2 do semestre #3
+{\ifthenelse{\equal{#4}{zero}}{{\ifthenelse{\equal{#5}{zero}}{não }{}}{}}{}}%
+foram recebidas contribuições discursivas%
+{\ifthenelse{\equal{#4}{zero}}{}{ de #4
+participante{\ifthenelse{\equal{#4}{um}}{}{s}}
+sobre a metodologia PBL{\ifthenelse{\equal{#5}{zero}}{}{ e}}}}%
+{\ifthenelse{\equal{#4}{zero}}{}{ de #5
+participante{\ifthenelse{\equal{#5}{um}}{}{s}}
+sobre a disciplina}}.%
+}
+
 \section{Respostas qualitativas}
 \label{sec-sem-quali}
+
+\subsection{\ProblemaA}
+\contribuicoesQualitativas{\ProblemaA}{2016.1}{dois}{quatro}{}{}{}
+
+Em relação ao problema ambos os participantes mencionam a complexidade.
+Um participante diz que há dependência com os conceitos de música
+e outro acredita que a complexidade está relacionada com este ser
+o primeiro problema ao qual foram submetidos.
+
+A metodologia foi avaliada positivamente, sendo
+``interessante'', ``útil'', ``colaborativa'' e ``soluções rápidas''
+as qualidaades mais mencionadas.
+Foi destacada também que a metodologia precisa de
+aprimoramentos.
+
+\subsection{\ProblemaB}
+\contribuicoesQualitativas{\ProblemaB}{2016.1}{dois}{dois}{2017.1}{seis}{cinco}
+
+Para este problema os participantes mencionaram a não especificação clara
+do problema, sobretuto os participantes do semestre 2016.1.
+Apesar de os participantes terem recebido
+uma explicação sobre a metodologia e terem participado
+do problema anterior com a metodologia PBL, é necessário considerarmos
+que os participantes estão envolvidos em um curso tradicional
+em que as atividades que executam nas outras disciplinas são normalmente
+especificações, ao contrário do que é recomendado nos princípios citados
+em \cite{dolmans1997seven} e que foram utilizados para
+a construção deste problema.
+
+Ainda sobre o problema, no caso do semestre 2017.1 a dificuldade
+do problema é o assunto mais mencionado.
+Embora exista divergência entre os participantes
+sobre o acréscimo de dificuldade, a maioria menciona que este
+problema é mais díficil que o anterior, no caso, ``\ProblemaG''.
+
+Com relação a metodologia, os participantes do semestre 2016.1
+mencionam a necessidade de mais retorno por parte dos tutores,
+embora as avaliações referentes ao tutores tenham sido
+os melhores avaliados quantitativamente, como destacamos
+na Seção~\ref{sec-sem-2016} na apresentação dos resultados
+da replicação deste problema.
+
+Os participantes do semestre 2017.1
+apresentaram algumas avaliações positivas para a metodologia
+e alguns pontos de atenção no que diz respeito ao
+comportamento necessário dos estudantes para o bom
+andamento da metodologia.
+As palavras ``desperta'', ``enriquecedor'', ``bom'' e ``\textit{insights}''
+foram mencionadas positivamente em relação a metodologia e ``perdidos''
+foi a palavra mencionada negativamente em relação a metodologia.
+Foi mencionado que das reuniões alguns estudantes não conseguem
+extrair as informações necessárias e que faltou aula teórica
+de como fazer o autômato antes da aplicação do problema.
+
+O compromisso dos estudantes é necessário para
+o andamento de uma disciplina, independente de qual seja
+o método utilizado.
+No caso do PBL, as interações entre os envolvidos no processo
+se fazem extremamente necessárias, nesse contexto,
+foi citado por três participantes do semestre 2017.1 as dificuldades
+com relação ao trabalho em equipe.
+
+\subsection{\ProblemaC}
+\contribuicoesQualitativas{\ProblemaC}{2016.1}{um}{um}{2017.1}{três}{dois}
+
+\subsection{\ProblemaD}
+\contribuicoesQualitativas{\ProblemaD}{2016.1}{um}{zero}{2017.1}{três}{um}
+
+\subsection{\ProblemaE}
+\contribuicoesQualitativas{\ProblemaE}{2016.1}{um}{um}{2017.1}{um}{um}
+
+\subsection{\ProblemaF}
+\contribuicoesQualitativas{\ProblemaF}{2017.1}{dois}{dois}{2016.1}{zero}{zero}
+
+\subsection{\ProblemaG}
+\contribuicoesQualitativas{\ProblemaG}{2017.1}{dois}{dois}{}{}{}
+
+
+\subsection{Concluintes}
+\contribuicoesQualitativasDisciplina{11}{concluintes}{2016.1}{dois}{dois}
+
+\contribuicoesQualitativasDisciplina{}{concluintes}{2017.1}{três}{três}
+
+\subsection{Desistentes}
+\contribuicoesQualitativasDisciplina{15}{desistentes}{2016.1}{um}{um}
+
+\contribuicoesQualitativasDisciplina{}{desistentes}{2017.1}{zero}{zero}
