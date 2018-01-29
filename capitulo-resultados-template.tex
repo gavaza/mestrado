@@ -313,3 +313,29 @@ que concluíram a disciplina consideraram a
 atividade profissional deles durante o semestre (#5),
 para $#4\%$ destes foi possível, em algum nível,
 conciliar este trabalho com a disciplina.}
+
+\newcommand{\falseH}{$\bigodot$}
+\newcommand{\trueH}{\checkmark}
+
+
+\newcommand{\allOK}[1]{%
+#1 & \trueH & \trueH & \trueH &
+\trueH & \trueH & \trueH & \trueH &
+\trueH & \trueH & \trueH \\
+}
+
+\newcommand{\noAllOKA}[6]{%
+#1 & {\ifthenelse{\equal{#2}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#3}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#4}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#5}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#6}{0}}{\falseH}{\trueH}} &
+}
+
+\newcommand{\noAllOKB}[5]{%
+{\ifthenelse{\equal{#1}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#2}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#3}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#4}{0}}{\falseH}{\trueH}} &
+{\ifthenelse{\equal{#5}{0}}{\falseH}{\trueH}}\\
+}
