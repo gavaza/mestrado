@@ -42,11 +42,15 @@ set datafile separator ","
 
 if (!exists("filein")) filein='sample.csv'
 
-Mylabel(Value) = Value > 20.0 ? sprintf("%.1f%%", Value) : ""
-range1 = "with labels font \"Courier,70\" rotate by -90 offset 0,-1.4 notitle"
+Mylabel(Value) = Value >= 12.5 ? sprintf("%.1f%%", Value) : ""
+styleb = "with labels font \"Courier,70\" rotate by -90"
+style1 = "textcolor rgb \"white\""
+style2 = "textcolor rgb \"royalblue\""
+style3 = "textcolor rgb \"black\""
+range1(Value1,Value2,Value) = 50.*Value1/Value + 100.*Value2/Value
 plot for [i=2:6] filein using (100.*column(i)/column(7)):xtic(1) title column(i),\
-	'' using 0:(100.*$2/$7):(Mylabel(100.0*$2/$7)) @range1,\
-	'' using 0:(100.*($2+$3)/$7):(Mylabel(100.0*$3/$7)) @range1,\
-	'' using 0:(100.*($2+$3+$4)/$7):(Mylabel(100.0*$4/$7)) @range1,\
-	'' using 0:(100.*($2+$3+$4+$5)/$7):(Mylabel(100.0*$5/$7)) @range1,\
-	'' using 0:(100.*($2+$3+$4+$5+$6)/$7):(Mylabel(100.0*$6/$7)) @range1
+	''using 0:(range1($2,0,$7)):(Mylabel(100.0*$2/$7)) @styleb @style1,\
+	''using 0:(range1($3,$2,$7)):(Mylabel(100.0*$3/$7)) @styleb @style2,\
+	''using 0:(range1($4,$2+$3,$7)):(Mylabel(100.0*$4/$7)) @styleb @style2,\
+	''using 0:(range1($5,$2+$3+$4,$7)):(Mylabel(100.0*$5/$7)) @styleb @style2,\
+	''using 0:(range1($6,$2+$3+$4+$5,$7)):(Mylabel(100.0*$6/$7)) @styleb @style3
