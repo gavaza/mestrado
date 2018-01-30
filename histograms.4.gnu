@@ -19,7 +19,6 @@ set style histogram rowstacked title textcolor lt -1
 set style textbox transparent margins  1.0,  1.0 border
 unset logscale
 set datafile missing '-'
-#set style data histograms
 set xtics border in scale 0,0 nomirror rotate by 0 autojustify
 set xtics   0,1,10
 set xrange [ 0.00000 : 11.000 ] reverse nowriteback
@@ -38,9 +37,14 @@ set arrow from graph 1,0.05 to graph 1,0 size screen 0.09,10,30 \
     filled ls 0
 set colorbox vertical origin screen 0.9, 0.2, 0 size screen 0.05, 0.6, 0 front  noinvert bdefault
 x = 0.0
-set linetype 1 lc rgb "dark-blue"        lw 2 pt 5 
-set linetype 2 lc rgb "dark-red"	        lw 15 pt 0
+set linetype 1 lc rgb "#AAFFAA"        lw 15 pi -5 pt 5
+set linetype 2 lc rgb "black"   lw 1 pt 5
 set linetype cycle 2
+Mylabel(Value1,Value2) = Value1==Value2 ? (Value1 > 0.0 ? sprintf("%.1f%%", Value1) : "") : ""
+styleb = "with labels font \"Courier,70\""
+style1 = "textcolor rgb \"black\""
+
 
 if (!exists("filein")) filein='notas.dat'
-plot filein u 1:2 with boxes t "Contagem",  '' u 1:(100.*$3):xtic(1) axes x1y2 w lp t "Percentil"
+plot filein u 1:2 with boxes t "Contagem",  '' u 1:(100.*$3):xtic(1) axes x1y2 w lp t "Percentil",\
+	''using 1:(100.*$3-3.):(Mylabel(100.*$3,100.*$4)) axes x1y2 @styleb @style1,\
