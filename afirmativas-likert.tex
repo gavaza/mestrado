@@ -1,28 +1,27 @@
-\newcommand{\AfirmacaoSimNao}[1]{\item{#1}
-                                \begin{itemize}
-                                        \item{Não}
-                                        \item{Sim}
-                                \end{itemize}
-                                }
-\newcommand{\AfirmacaoLikertBase}{%
-                                        \item{Discordo}
-                                        \item{Discordo parcialmente}
-                                        \item{Indiferente}
-                                        \item{Concordo parcialmente}
-                                        \item{Concordo}
-                                }
-
-\newcommand{\AfirmacaoLikert}[1]{\item{#1}
-                                \begin{itemize}
-				\AfirmacaoLikertBase
-				\end{itemize}
+\newcommand{\NewItem}[1]{%
+$\bullet$ #1
 }
 
-\newcommand{\AfirmacaoLikertA}[1]{\item{#1}
-                                \begin{itemize}
-				\AfirmacaoLikertBase
-				\item{Não tive trabalho neste período}
-				\end{itemize}
+\newcommand{\AfirmacaoSimNao}[1]{\item{#1}
+\begin{tabular}{ll}
+\NewItem{Não} & \NewItem{Sim}
+\end{tabular}
+                                }
+
+\newcommand{\AfirmacaoLikertBase}[1]{%
+\begin{tabular}{lll}
+\NewItem{Discordo} & \NewItem{Discordo parcialmente} & \NewItem{Indiferente}\\
+\NewItem{Concordo parcialmente} & \NewItem{Concordo} &
+{\ifthenelse{\equal{#1}{}}{}{\NewItem{#1}}}
+\end{tabular}
+                                }
+
+\newcommand{\AfirmacaoLikert}[1]{\item{#1}\\
+				\AfirmacaoLikertBase{}
+}
+
+\newcommand{\AfirmacaoLikertA}[1]{\item{#1}\\
+				\AfirmacaoLikertBase{Não tive trabalho neste período}
 }
 
 % form problemas
