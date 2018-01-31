@@ -37,8 +37,8 @@ set arrow from graph 1,0.05 to graph 1,0 size screen 0.09,10,30 \
     filled ls 0
 set colorbox vertical origin screen 0.9, 0.2, 0 size screen 0.05, 0.6, 0 front  noinvert bdefault
 x = 0.0
-set linetype 1 lc rgb "#AAFFAA"        lw 15 pi -5 pt 5
-set linetype 2 lc rgb "black"   lw 1 pt 5
+set linetype 1 lc rgb "#CCFFCC" lw 5  pt 5
+set linetype 2 lc rgb "black"   lw 15 pt 5
 set linetype cycle 2
 Mylabel(Value1,Value2) = Value1==Value2 ? (Value1 > 0.0 ? sprintf("%.1f%%", Value1) : "") : ""
 styleb = "with labels font \"Courier,70\""
@@ -47,4 +47,4 @@ style1 = "textcolor rgb \"black\""
 
 if (!exists("filein")) filein='notas.dat'
 plot filein u 1:2 with boxes t "Contagem",  '' u 1:(100.*$3):xtic(1) axes x1y2 w lp t "Percentil",\
-	''using 1:(100.*$3-3.):(Mylabel(100.*$3,100.*$4)) axes x1y2 @styleb @style1,\
+	''using 1:(100.*$3-5.):(Mylabel(100.*$3,100.*$4)) axes x1y2 @styleb @style1,\
