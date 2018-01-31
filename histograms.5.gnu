@@ -5,7 +5,7 @@ set output fileout
 set bar 1.000000 front
 set border 11 front lt black linewidth 1.000 dashtype solid
 set boxwidth 0.75 absolute
-set style fill solid 1.00 border lt -1
+set style fill solid 0.75 border lt -1
 set style circle radius graph 0.15, first 0.00000, 0.00000 
 set style ellipse size graph 0.05, 0.03, first 0.00000 angle 0 units xy
 set grid nopolar
@@ -38,12 +38,11 @@ set arrow from graph 0,0.95 to graph 0,1 size screen 0.09,10,30 \
 set arrow from graph 1,0.05 to graph 1,0 size screen 0.09,10,30 \
     filled ls 0
 set colorbox vertical origin screen 0.9, 0.2, 0 size screen 0.05, 0.6, 0 front  noinvert bdefault
-#set linetype 1 lc rgb "#32CD32"        lw 2 pt 5
-set linetype 1 lc rgb "#55DD55"        lw 2 pt 5
-set linetype 2 lc rgb "#CCFFCC" lw 5  pt 5
-set linetype 3 lc rgb "lemonchiffon" lw 2 pt 5
-set linetype 4 lc rgb "#FF5555"    lw 2 pt 5
-set linetype 5 lc rgb "#BB2222"        lw 2 pt 5
+set linetype 1 lc rgb "#55DD55"		lw 2 pt 5
+set linetype 2 lc rgb "#CCFFCC"  	lw 2 pt 5
+set linetype 3 lc rgb "lemonchiffon"	lw 2 pt 5
+set linetype 4 lc rgb "#FF5555"		lw 2 pt 5
+set linetype 5 lc rgb "#BB2222"		lw 2 pt 5
 set linetype cycle 5
 
 set datafile separator ","

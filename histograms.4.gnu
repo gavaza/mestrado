@@ -4,7 +4,7 @@ if (!exists("fileout")) fileout='histograms.5.png'
 set output fileout
 set bar 1.000000 front
 set border 11 front lt black linewidth 1.000 dashtype solid
-set boxwidth 0.75 absolute
+set boxwidth 0.5 absolute
 set style fill solid 1.00 border lt -1
 set style circle radius graph 0.02, first 0.00000, 0.00000 
 set style ellipse size graph 0.05, 0.03, first 0.00000 angle 0 units xy
