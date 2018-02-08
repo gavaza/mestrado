@@ -14,7 +14,7 @@ set grid noxtics nomxtics ytics nomytics noztics nomztics \
 set grid layerdefault   lt 0 linewidth 0.500,  lt 0 linewidth 0.500
 set key outside right top vertical Left reverse noenhanced autotitle columnhead nobox
 set key invert samplen 6 spacing 1.5 width 0 height 0
-unset key
+if (!exists("legenda")) unset key
 set style histogram rowstacked title textcolor lt -1
 set style textbox transparent margins  1.0,  1.0 border
 unset logscale
