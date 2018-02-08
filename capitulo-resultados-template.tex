@@ -142,28 +142,35 @@ Como existe dados para apenas um participante #1
 em avaliação sobre a disciplina no semestre #2, não foi
 construído gráfico.}
 
-\newcommand{\AvaliacaoHipoteseBase}[3]{Para avaliação da hipótese ``#1'', referenciada na
-Seção~\ref{sec-hipoteses} como item~\ref{#2} de hipóteses
-{\ifthenelse{\equal{#3}{he}}{específicas}{gerais}}, foi
-considerada a favorabilidade para os resultados
+\newcommand{\AvaliacaoObjetivoBase}[3]{Para avaliação do objetivo específico ``#1'',
+referenciada na Seção~\ref{sec-objetivos} como item~\ref{#2},
+foi considerada a favorabilidade para os resultados
 de percepção dos estudantes para}
+
+\newcommand{\AvaliacaoHipoteseBase}[3]{Para avaliação da hipótese ``#1'',
+referenciada na Seção~\ref{sec-hipoteses} como item~\ref{#2},
+foi considerada a favorabilidade para os resultados
+de percepção dos estudantes para}
+
+\newcommand{\AvaliacaoObjetivo}[9]{\AvaliacaoObjetivoBase{#1}{#2}{#3}
+\AfirmativasSeparador{#4}{#5}{#6}{#7}{#8}{#9}{}{}{}.}
 
 \newcommand{\AvaliacaoHipotese}[9]{\AvaliacaoHipoteseBase{#1}{#2}{#3}
 \AfirmativasSeparador{#4}{#5}{#6}{#7}{#8}{#9}{}{}{}.}
 
-\newcommand{\AprovacaoHipotese}[5]{Ao analisar os resultados obtidos para as respostas
+\newcommand{\AprovacaoObjetivo}[5]{Ao analisar os resultados obtidos para as respostas
 dos participantes {\ifthenelse{\equal{#5}{}}{}{do semestre #5 }}para
 a{\ifthenelse{\equal{#4}{1}}{s}{}}
 afirmativa{\ifthenelse{\equal{#4}{1}}{s}{}} de avaliação
-da hipótese, identificamos que a favorabilidade
+do objetivo, identificamos que a favorabilidade
 para #1a{\ifthenelse{\equal{#4}{1}}{s}{}}
 afirmativa{\ifthenelse{\equal{#4}{1}}{s}{}}
 {\ifthenelse{\equal{#2}{}}{}{#2 }}atende{\ifthenelse{\equal{#4}{1}}{m}{}} os critérios
 previamente definidos em {\ifthenelse{\equal{#3}{1}}{apenas uma replicação}{#3 replicações}}.}
 
-\newcommand{\AprovacaoHipoteseResultado}[9]{Os resultados
+\newcommand{\AprovacaoObjetivoResultado}[9]{Os resultados
 {\ifthenelse{\equal{#1}{}}{}{#1 }}permitem concluir
-sobre a validade da hipótese com os critérios
+sobre o resultado positivo para o objetivo com os critérios
 definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
 {para o problema ``#2''}
 {{\ifthenelse{\equal{#4}{}}
@@ -177,12 +184,12 @@ definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
 { e para os problemas ``#6'' e ``#7''}
 { e para os problemas ``#6'', ``#7'' e ``#8''}}} no semestre #9}}.}
 
-\newcommand{\HipoteseFavorabilidade}[4]{Para a afirmativa ``#1''
+\newcommand{\ObjetivoFavorabilidade}[4]{Para a afirmativa ``#1''
 na replicação do problema ``#2'' no
 semestre #3 a percepção de favorabilidade,
 nos critérios definidos, ficou em $#4\%$.}
 
-\newcommand{\HipoteseFavorabilidadeDestaque}[6]{O{\ifthenelse{\equal{#6}{}}{}{s}}
+\newcommand{\ObjetivoFavorabilidadeDestaque}[6]{O{\ifthenelse{\equal{#6}{}}{}{s}}
 principa{\ifthenelse{\equal{#6}{}}{l}{is}} destaque{\ifthenelse{\equal{#6}{}}{}{s}} para esta avaliação
 est{\ifthenelse{\equal{#6}{}}{á}{ão}}{\ifthenelse{\equal{#1}{}}{}{ na afirmativa``#1''}} na
 replicação do problema ``#2''%
@@ -194,20 +201,20 @@ atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}%
 participantes sobre a concordância}{, sendo $#5\%$ a
 concordância integral}}}.}
 
-\newcommand{\HipoteseFavorabilidadeDestaqueContinuidade}[3]{No
+\newcommand{\ObjetivoFavorabilidadeDestaqueContinuidade}[3]{No
 semestre #1 a percepção de favorabilidade para a afirmação em
 destaque, para {\ifthenelse{\equal{#3}{}}{este mesmo problema}{os mesmos problemas}},
 {\ifthenelse{\equal{#3}{}}{teve um}{tiveram, respectivamente,}}
 atingimento {\ifthenelse{\equal{#2}{100,0}}{integral}{de $#2\%$}}%
 {\ifthenelse{\equal{#3}{}}{}{{\ifthenelse{\equal{#3}{100,0}}{ também integral}{ e $#3\%$}}}}.}
 
-\newcommand{\HipoteseFavorabilidadeDestaqueDiferencas}[4]{No
+\newcommand{\ObjetivoFavorabilidadeDestaqueDiferencas}[4]{No
 caso do semestre #1 {\ifthenelse{\equal{#2}{100,0}}
 {não houve concordância em partes}{a concordância em partes foi de $#2\%$}},
 enquanto no semestre #3 {\ifthenelse{\equal{#4}{100,0}}
 {não houve concordância em partes}{a concordância em partes foi de $#4\%$}}.}
 
-\newcommand{\HipoteseFavorabilidadeDestaqueOutra}[5]{Outro destaque
+\newcommand{\ObjetivoFavorabilidadeDestaqueOutra}[5]{Outro destaque
 para esta avaliação está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
 replicação do problema ``#2'' no
 semestre #3 que a percepção de favorabilidade,
@@ -221,7 +228,7 @@ atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}%
 {\ifthenelse{\equal{#2}{}}{}{ ``#2''}}
 não foi replicado no semestre #1.}
 
-\newcommand{\HipoteseNaoAtende}[9]{%
+\newcommand{\ObjetivoNaoAtende}[9]{%
 Na replicação do problema ``#1''%
 {\ifthenelse{\equal{#2}{}}{}{, no semestre ``#2'',}}
 a favorabilidade não atinge os critérios para
@@ -242,7 +249,7 @@ afirmativa{\ifthenelse{\equal{#2}{}}{}{s}}
 {, #6{\ifthenelse{\equal{#8}{}}{ e #7}{%
 {, #7{\ifthenelse{\equal{#9}{}}{ e #8}{, #8  e #9}}}}}}}}}}}}}}}}}}}}}}
 
-\newcommand{\HipoteseAtende}[3]{%
+\newcommand{\ObjetivoAtende}[3]{%
 Na replicação do problema ``#1''%
 {\ifthenelse{\equal{#2}{}}{}{, no semestre #2,}}
 a favorabilidade atinge os critérios para
