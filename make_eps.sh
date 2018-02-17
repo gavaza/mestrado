@@ -24,6 +24,6 @@ gnuplot -e "legenda='OK'; fileout='figura-ref-graficos.eps.tmp'; filein='figura-
 head -n 590 figura-ref-graficos.eps.tmp > figura-ref-graficos.eps
 tail -n 150 figura-ref-graficos.eps.tmp | head -n 99 >> figura-ref-graficos.eps
 
-#rm figura-ref-graficos.csv figura-ref-graficos.eps.tmp
+rm figura-ref-graficos.csv figura-ref-graficos.eps.tmp
 
 exit 0
