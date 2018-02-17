@@ -50,7 +50,7 @@ set datafile separator ","
 if (!exists("filein")) filein='sample.csv'
 
 Mylabel(Value) = Value >= 12.5 ? sprintf("%.1f%%", Value) : ""
-styleb = "with labels font \"Courier,70\" rotate by -90"
+styleb = "notitle with labels font \"Courier,70\" rotate by -90"
 style1 = "textcolor rgb \"white\""
 style2 = "textcolor rgb \"royalblue\""
 style3 = "textcolor rgb \"black\""
