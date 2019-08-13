@@ -16,15 +16,15 @@ de pesquisa sobre a percepção do problema.}
 
 % caracterização de perfil dos participantes
 \newcommand{\perfilParticipanteBase}[6]{com a idade média do
-conjunto de participantes de #1 anos, onde o mais jovem possui
+conjunto de participantes de #1 anos, em que o mais jovem possui
 #2 anos e o mais velho possui #3 anos.
 A maioria dos participantes está cursando #6,
-onde {\ifthenelse{\equal{#4}{0}}{nenhum dos}{{\ifthenelse{\equal{#4}{100,0}}{todos os}{#4\% dos}}}} participantes
+sendo que {\ifthenelse{\equal{#4}{0}}{nenhum dos}{{\ifthenelse{\equal{#4}{100,0}}{todos os}{#4\% dos}}}} participantes
 já desistiu desta disciplina de estudo antes e {\ifthenelse{\equal{#5}{0}}{nenhum dos}{{\ifthenelse{\equal{#5}{100,0}}{todos os}{#5\% dos}}}} participantes
 já desistiu de outras disciplinas.}
 
 
-\newcommand{\perfilParticipante}[7]{Este conjunto de participantes
+\newcommand{\perfilParticipante}[7]{Este conjunto
 é predominantemente constituído de
 participantes do sexo masculino, sendo apenas uma participante do
 sexo feminino#7, \perfilParticipanteBase{#1}{#2}{#3}{#4}{#5}{#6}}
@@ -120,7 +120,7 @@ avaliação dos participantes #2 do semestre #3 sobre a disciplina.
 \newcommand{\figuraPercepcaoParticipanteDisciplinaNotas}[7]{
 \figuraPercepcaoParticipanteDisciplinaNotasBase{#1}{#2}{#3}
 Podemos observar que a maioria dos participantes #2 atribuíram
-notas altas para avaliar a disciplina no semestre #3, onde,%
+notas altas para avaliar a disciplina no semestre #3, sendo que%
 {\ifthenelse{\equal{#7}{}}{}{ #7}}
 {\ifthenelse{\equal{#4}{100,0}}{todas as}{$#4\%$ das}}
 notas foram maiores ou iguais a $7,00$%
@@ -130,7 +130,7 @@ com uma média de $#6$.}
 \newcommand{\figuraPercepcaoParticipanteDisciplinaNotasA}[7]{
 \figuraPercepcaoParticipanteDisciplinaNotasBase{#1}{#2}{#3}
 Podemos observar que os participantes #2 não atribuíram
-notas altas para avaliar a disciplina no semestre #3, onde,%
+notas altas para avaliar a disciplina no semestre #3, sendo que%
 {\ifthenelse{\equal{#7}{}}{}{ #7}}
 {\ifthenelse{\equal{#4}{100,0}}{todas as}{$#4\%$ das}}
 notas foram maiores ou iguais a $7,00$%, 
@@ -292,7 +292,8 @@ que diz respeito a #3 condução da disciplina (#5),
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
 participantes{\ifthenelse{\equal{#2}{}}{}{ #2}}
-mencionaram, em algum nível,
+{\ifthenelse{\equal{#1}{0,0}}{mencionou}{mencionaram}}%
+, em algum nível,
 {\ifthenelse{\equal{#2}{desistentes}}%
 {desistência por desagrado}{satisfação}} com #4.}
 
@@ -302,12 +303,12 @@ mencionaram, em algum nível,
 participantes a consideração foi que, em algum nível, #2 (#3).}
 
 \newcommand{\AprovacaoDisciplinaB}[5]{%
-Foi expressado o desejo de, em algum nível, #2 (#3) por
+Foi expresso o desejo de, em algum nível, #2 (#3) por
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$ dos}}}}
 participantes%
 {\ifthenelse{\equal{#5}{}}{}{,{\ifthenelse{\equal{#5}{0,0}}{ sem nenhuma
-contrariedade declarada}{onde #4 $#5\%$ discorda, em
+contrariedade declarada}{sendo que #4 $#5\%$ discorda, em
 algum nível, desta opção}}}}.}
 
 \newcommand{\AprovacaoDisciplinaC}[2]{%
@@ -327,10 +328,22 @@ Dizem gostar de #2 (#3) $#1\%$ dos participantes.}
 \newcommand{\AprovacaoDisciplinaF}[4]{%
 A maioria dos participantes
 entende que{\ifthenelse{\equal{#4}{}}{}{ #4}} #2
-(#3), onde
+(#3), sendo que
 {\ifthenelse{\equal{#1}{100,0}}{todos os}%
 {{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$}}}}
-participantes concordaram, em algum nível, com a afirmação.}
+participantes
+{{\ifthenelse{\equal{#1}{0,0}}{concordou}{concordaram}}},
+em algum nível, com a afirmação.}
+
+\newcommand{\AprovacaoDisciplinaH}[4]{%
+A maioria dos participantes
+entende que{\ifthenelse{\equal{#4}{}}{}{ #4}} #2
+(#3), sendo que apenas
+{\ifthenelse{\equal{#1}{100,0}}{todos os}%
+{{\ifthenelse{\equal{#1}{0,0}}{nenhum dos}{$#1\%$}}}}
+participantes 
+{{\ifthenelse{\equal{#1}{0,0}}{concordou}{concordaram}}},
+em algum nível, com a afirmação.}
 
 \newcommand{\AprovacaoDisciplinaG}[5]{%
 No semestre #1, #2 entre os #3 participantes

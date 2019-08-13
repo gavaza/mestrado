@@ -1,4 +1,4 @@
-set terminal postscript eps enhanced color font "Courier,80" fontscale 1.0 size 30, 15
+set terminal postscript eps enhanced color font "Courier,80" fontscale 1.0 size 30, 20
 set encoding utf8
 if (!exists("fileout")) fileout='histograms.5.png'
 set output fileout
@@ -12,7 +12,7 @@ set grid nopolar
 set grid noxtics nomxtics ytics nomytics noztics nomztics \
  nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics
 set grid layerdefault   lt 0 linewidth 0.500,  lt 0 linewidth 0.500
-set key outside right top vertical Left reverse noenhanced autotitle columnhead nobox
+set key outside center bottom vertical Left reverse noenhanced autotitle columnhead nobox
 set key invert samplen 6 spacing 1.5 width 0 height 0
 if (!exists("legenda")) unset key
 set style histogram rowstacked title textcolor lt -1
