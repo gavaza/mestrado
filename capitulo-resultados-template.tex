@@ -21,7 +21,7 @@ conjunto de participantes de #1 anos, em que o mais jovem possui
 A maioria dos participantes está cursando #6,
 sendo que {\ifthenelse{\equal{#4}{0}}{nenhum dos}{{\ifthenelse{\equal{#4}{100,0}}{todos os}{#4\% dos}}}} participantes
 já desistiu desta disciplina de estudo antes e {\ifthenelse{\equal{#5}{0}}{nenhum dos}{{\ifthenelse{\equal{#5}{100,0}}{todos os}{#5\% dos}}}} participantes
-já desistiu de outras disciplinas.}
+já {\ifthenelse{\equal{#5}{0}}{desistiu}{desistiram}} de outras disciplinas.}
 
 
 \newcommand{\perfilParticipante}[7]{Este conjunto
@@ -51,7 +51,7 @@ desistiu de outros disciplinas antes}}.}
 \newcommand{\figuraPercepcaoParticipante}[3]{
 
 A Figura~\ref{percep-#1} apresenta um gráfico com os resultados referentes
-as percepções dos participantes na aplicação do
+às percepções dos participantes na aplicação do
 Problema #2 no semestre #3.
 
 \begin{figure}[!htb]
@@ -66,7 +66,7 @@ Problema #2 no semestre #3.
 \newcommand{\figuraPercepcaoParticipanteDisciplina}[3]{
 
 A Figura~\ref{percep-#1} apresenta um gráfico com os resultados referentes
-a percepção geral dos participantes #2 do semestre #3 sobre a disciplina.
+à percepção geral dos participantes #2 do semestre #3 sobre a disciplina.
 
 \begin{figure}[!htb]
 \centering
@@ -227,9 +227,9 @@ atingimento {\ifthenelse{\equal{#2}{100,0}}{integral}{de $#2\%$}}%
 
 \newcommand{\ObjetivoFavorabilidadeDestaqueDiferencas}[4]{No
 caso do semestre #1 {\ifthenelse{\equal{#2}{100,0}}
-{não houve concordância em partes}{a concordância em partes foi de $#2\%$}},
+{não houve concordância em parte}{a concordância em parte foi de $#2\%$}},
 enquanto no semestre #3 {\ifthenelse{\equal{#4}{100,0}}
-{não houve concordância em partes}{a concordância em partes foi de $#4\%$}}.}
+{não houve concordância em parte}{a concordância em parte foi de $#4\%$}}.}
 
 \newcommand{\ObjetivoFavorabilidadeDestaqueOutra}[5]{Outro destaque
 para esta avaliação está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
