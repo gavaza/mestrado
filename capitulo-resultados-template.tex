@@ -167,7 +167,7 @@ identificamos que a favorabilidade
 para a{\ifthenelse{\equal{#4}{1}}{s}{}}
 afirmativa{\ifthenelse{\equal{#4}{1}}{s}{}}
 {\ifthenelse{\equal{#2}{}}{}{#2 }}atende{\ifthenelse{\equal{#4}{1}}{m}{}} os critérios
-previamente definidos em {\ifthenelse{\equal{#3}{1}}{apenas uma replicação}{#3 replicações}}.}
+previamente definidos em {\ifthenelse{\equal{#3}{1}}{apenas uma aplicação}{#3 aplicações}}.}
 
 \newcommand{\AprovacaoObjetivoResultado}[9]{Os resultados
 {\ifthenelse{\equal{#1}{}}{}{#1 }}permitem concluir
@@ -177,7 +177,7 @@ definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
 {{\ifthenelse{\equal{#4}{}}
 {para os problemas ``#2'' e ``#3''}
 {para os problemas ``#2'', ``#3'' e ``#4''}}}}}}%
-{\ifthenelse{\equal{#5}{}}{}{ na replicação do semestre #5}}%
+{\ifthenelse{\equal{#5}{}}{}{ na aplicação do semestre #5}}%
 {\ifthenelse{\equal{#6}{}}{}{%
 {\ifthenelse{\equal{#7}{}}%
 { e para o problema ``#6''}
@@ -193,7 +193,7 @@ definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
 {{\ifthenelse{\equal{#4}{}}
 {para os problemas ``#2'' e ``#3''}
 {para os problemas ``#2'', ``#3'' e ``#4''}}}}}}%
-{\ifthenelse{\equal{#5}{}}{}{ na replicação do semestre #5}}%
+{\ifthenelse{\equal{#5}{}}{}{ na aplicação do semestre #5}}%
 {\ifthenelse{\equal{#6}{}}{}{%
 {\ifthenelse{\equal{#7}{}}%
 { e para o problema ``#6''}
@@ -202,14 +202,14 @@ definidos{\ifthenelse{\equal{#2}{}}{}{ {\ifthenelse{\equal{#3}{}}
 { e para os problemas ``#6'', ``#7'' e ``#8''}}} no semestre #9}}.}
 
 \newcommand{\ObjetivoFavorabilidade}[4]{Para a afirmativa ``#1''
-na replicação do problema ``#2'' no
+na aplicação do problema ``#2'' no
 semestre #3 a percepção de favorabilidade,
 nos critérios definidos, ficou em $#4\%$.}
 
 \newcommand{\ObjetivoFavorabilidadeDestaque}[6]{O{\ifthenelse{\equal{#6}{}}{}{s}}
 principa{\ifthenelse{\equal{#6}{}}{l}{is}} destaque{\ifthenelse{\equal{#6}{}}{}{s}} para esta avaliação
 est{\ifthenelse{\equal{#6}{}}{á}{ão}}{\ifthenelse{\equal{#1}{}}{}{ na afirmativa``#1''}} na
-replicação do problema ``#2''%
+aplicação do problema ``#2''%
 {\ifthenelse{\equal{#6}{}}{}{ e do problema ``#6''}}%
 {\ifthenelse{\equal{#3}{}}{}{ no semestre #3}} que a percepção de favorabilidade,
 nos critérios definidos, {\ifthenelse{\equal{#6}{}}{teve um}{tiveram}}
@@ -233,7 +233,7 @@ enquanto no semestre #3 {\ifthenelse{\equal{#4}{100,0}}
 
 \newcommand{\ObjetivoFavorabilidadeDestaqueOutra}[5]{Outro destaque
 para esta avaliação está{\ifthenelse{\equal{#1}{}}{}{na afirmativa``#1''}} na
-replicação do problema ``#2'' no
+aplicação do problema ``#2'' no
 semestre #3 que a percepção de favorabilidade,
 nos critérios definidos, teve um
 atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}%
@@ -246,7 +246,7 @@ atingimento {\ifthenelse{\equal{#4}{100,0}}{integral}{de $#4\%$}}%
 não foi replicado no semestre #1.}
 
 \newcommand{\ObjetivoNaoAtende}[9]{%
-Na replicação do problema ``#1''%
+Na aplicação do problema ``#1''%
 {\ifthenelse{\equal{#2}{}}{}{, no semestre ``#2'',}}
 a favorabilidade não atinge os critérios para
 \AfirmativasSeparador{#3}{#4}{#5}{#6}{#7}{#8}{#9}{}{}.}
@@ -267,13 +267,13 @@ afirmativa{\ifthenelse{\equal{#2}{}}{}{s}}
 {, #7{\ifthenelse{\equal{#9}{}}{ e #8}{, #8  e #9}}}}}}}}}}}}}}}}}}}}}}
 
 \newcommand{\ObjetivoAtende}[3]{%
-Na replicação do problema ``#1''%
+Na aplicação do problema ``#1''%
 {\ifthenelse{\equal{#2}{}}{}{, no semestre #2,}}
 a favorabilidade atinge os critérios para
 {\ifthenelse{\equal{#3}{s}}{a afirmativa}{todas as afirmativas}}.}
 
 \newcommand{\MaisDestaque}[5]{%
-Também é destaque que em #1 das #2 replicações o atingimento da
+Também é destaque que em #1 das #2 aplicações o atingimento da
 favorabilidade foi integral no semestre #3, sendo o resultado menos
 favorável de $#4\%$ no problema ``#5''.}
 
